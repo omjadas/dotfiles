@@ -1,5 +1,6 @@
+system_type=$(uname -s)
+
 update () {
-    system_type=$(uname -s)
     if [ "$system_type" = "Linux" ]; then
         distro=$(lsb_release -si)
         if [ "$distro" = "Arch" ]; then
@@ -17,6 +18,10 @@ update () {
     vim -c "PlugUpdate | q | q"
 }
 
+if [ "$system_type" = "Darwin" ]; then
+    alias ls='gls --color'
+fi
+
 alias gi='git-ignore'
 
 alias la='ls -a'
@@ -29,3 +34,4 @@ alias cat='ccat'
 alias vi='vim'
 
 alias sudo='sudo '
+
