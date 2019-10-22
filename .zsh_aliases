@@ -1,7 +1,7 @@
 update () {
     system_type=$(uname -s)
     if [ "$system_type" = "Linux" ]; then
-        distro=$(lsb_release -is)
+        distro=$(lsb_release -si)
         if [ "$distro" = "Arch" ]; then
             yay -Syu
         elif [ "$distro" = "Ubuntu" ]; then
