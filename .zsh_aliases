@@ -1,11 +1,19 @@
 update () {
     system_type=$(uname -s)
     if [ "$system_type" = "Linux" ]; then
-        yay -Syu
+        distro=$(lsb_release -is)
+        if [ "$distro" = "Arch" ]; then
+            yay -Syu
+        elif [ "$distro" = "Ubuntu" ]; then
+            sudo apt update && sudo apt dist-upgrade
+        elif [ "$distro" = "Fedora" ]; then
+            sudo dnf upgrade
+        fi
     else
         brew update && brew upgrade
     fi
-    gi -u
+    antigen update
+    git-ignore -u
     vim -c "PlugUpdate | q | q"
 }
 
