@@ -12,6 +12,7 @@ antigen bundle pipenv
 antigen bundle rails
 antigen bundle sudo
 antigen bundle tmux
+antigen bundle tmuxinator
 antigen bundle vscode
 
 antigen bundle laggardkernel/git-ignore
