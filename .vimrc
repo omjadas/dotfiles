@@ -27,7 +27,7 @@ set colorcolumn=80
 colorscheme solarized8
 let g:solarized_termtrans=1
 
-"hi Normal guigb=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 set shiftwidth=4
 set tabstop=4
