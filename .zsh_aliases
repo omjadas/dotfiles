@@ -1,13 +1,10 @@
-system_type=$(uname -s)
-
 update () {
-    if [ "$system_type" = "Linux" ]; then
-        distro=$(lsb_release -si)
-        if [ "$distro" = "Arch" ]; then
+    if [ "$SYSTEM_TYPE" = "Linux" ]; then
+        if [ "$DISTRO" = "Arch" ]; then
             yay -Syu
-        elif [ "$distro" = "Ubuntu" ]; then
+        elif [ "$DISTRO" = "Ubuntu" ]; then
             sudo apt update && sudo apt dist-upgrade
-        elif [ "$distro" = "Fedora" ]; then
+        elif [ "$DISTRO" = "Fedora" ]; then
             sudo dnf upgrade
         fi
     else
@@ -18,7 +15,7 @@ update () {
     vim -c "PlugUpdate | q | q"
 }
 
-if [ "$system_type" = "Darwin" ]; then
+if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     alias ls='gls --color'
 fi
 
