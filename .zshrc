@@ -9,7 +9,6 @@ antigen bundle docker-compose
 antigen bundle fasd
 antigen bundle git
 antigen bundle npm
-antigen bundle nvm
 antigen bundle pipenv
 antigen bundle rails
 antigen bundle sudo
@@ -18,6 +17,8 @@ antigen bundle tmuxinator
 antigen bundle vscode
 
 antigen bundle laggardkernel/git-ignore
+
+antigen bundle lukechilds/zsh-nvm
 
 antigen bundle MichaelAquilina/zsh-you-should-use
 

@@ -2,8 +2,10 @@ export EDITOR='vim'
 export WIN_HOME='/mnt/c/Users/Omja Das'
 
 export SYSTEM_TYPE=$(uname -s)
-
 [[ $SYSTEM_TYPE = "Linux" ]] && export DISTRO=$(lsb_release -is)
+
+export NVM_AUTO_USE=true
+export NVM_DIR="$HOME/.nvm"
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
 export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)

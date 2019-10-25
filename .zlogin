@@ -30,6 +30,5 @@ group_lazy_load() {
 }
 
 group_lazy_load $HOME/.rvm/scripts/rvm rvm ruby bundle irb rake rails
-group_lazy_load /usr/share/nvm/init-nvm.sh nvm node npm npx
 
 unset -f group_lazy_load

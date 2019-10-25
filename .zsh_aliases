@@ -1,21 +1,22 @@
 update () {
-    if [ "$SYSTEM_TYPE" = "Linux" ]; then
-        if [ "$DISTRO" = "Arch" ]; then
+    if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
+        if [[ "$DISTRO" = "Arch" ]]; then
             yay -Syu
-        elif [ "$DISTRO" = "Ubuntu" ]; then
+        elif [[ "$DISTRO" = "Ubuntu" || "$DISTRO" = "Debian" ]]; then
             sudo apt update && sudo apt dist-upgrade
-        elif [ "$DISTRO" = "Fedora" ]; then
+        elif [[ "$DISTRO" = "Fedora" ]]; then
             sudo dnf upgrade
         fi
     else
         brew update && brew upgrade
     fi
     antigen update
+    nvm upgrade
     git-ignore -u
     vim -c "PlugUpdate | q | q"
 }
 
-if [ "$SYSTEM_TYPE" = "Darwin" ]; then
+if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     alias ls='gls --color'
 fi
 
