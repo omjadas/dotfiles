@@ -1,12 +1,14 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'lifepillar/vim-solarized8'
+
+Plug 'mhinz/vim-signify'
+
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'scrooloose/nerdtree'
 
 Plug 'scrooloose/syntastic'
-
-Plug 'lifepillar/vim-solarized8'
 
 Plug 'tpope/vim-fugitive'
 
