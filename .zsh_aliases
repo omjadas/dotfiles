@@ -13,6 +13,7 @@ update () {
     antigen update
     nvm upgrade
     git-ignore -u
+    ~/.tmux/plugins/tpm/bin/update_plugins all
     vim -c "PlugUpdate | q | q"
 }
 
