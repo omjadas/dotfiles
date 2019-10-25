@@ -1,14 +1,20 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'scrooloose/nerdtree'
+
+Plug 'scrooloose/syntastic'
+
 Plug 'lifepillar/vim-solarized8'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'tpope/vim-surround'
 
 Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
-
-Plug 'scrooloose/nerdtree'
-
-Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
