@@ -43,7 +43,7 @@ bindkey '^\n' autosuggest-execute
 # Source aliases
 [[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
-if [ "$SYSTEM_TYPE" = "Linux" ]; then
+if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
 else
     eval $(gdircolors ~/.dircolors/dircolors.ansi-dark)
