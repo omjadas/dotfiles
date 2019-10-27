@@ -4,6 +4,11 @@ export WIN_HOME='/mnt/c/Users/Omja Das'
 export SYSTEM_TYPE=$(uname -s)
 [[ $SYSTEM_TYPE = "Linux" ]] && export DISTRO=$(lsb_release -is)
 
+# Add wsl-open as browser for WSL
+if [[ $(uname -r) == *Microsoft ]]; then
+    export BROWSER=wsl-open
+fi
+
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 
