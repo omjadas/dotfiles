@@ -1,5 +1,5 @@
 # Install antigen if not found
-if [[ ! -f ~/antigen.zsh ]]; then
+if [[ ! -f "$HOME/antigen.zsh" ]]; then
     curl -L git.io/antigen > antigen.zsh
 fi
 
@@ -41,7 +41,7 @@ bindkey '^ ' autosuggest-accept
 bindkey '^\n' autosuggest-execute
 
 # Source aliases
-[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
+[[ -f "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 
 if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
@@ -50,4 +50,4 @@ else
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+[[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
