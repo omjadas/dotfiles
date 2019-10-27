@@ -2,12 +2,16 @@ export EDITOR='vim'
 export WIN_HOME='/mnt/c/Users/Omja Das'
 
 export SYSTEM_TYPE=$(uname -s)
-[[ $SYSTEM_TYPE = "Linux" ]] && export DISTRO=$(lsb_release -is)
 
-# Add wsl-open as browser for WSL
-if [[ $(uname -r) =~ (m|M)icrosoft ]]; then
-    export BROWSER=wsl-open
+# Linux specific config
+if [[ $SYSTEM_TYPE = "Linux" ]]; then
+    export DISTRO=$(lsb_release -is)
+    # Add wsl-open as browser for WSL
+    if [[ $(uname -r) =~ (m|M)icrosoft ]]; then
+        export BROWSER=wsl-open
+    fi
 fi
+
 
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
