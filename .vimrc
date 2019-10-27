@@ -6,23 +6,23 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'lifepillar/vim-solarized8'
+  Plug 'lifepillar/vim-solarized8'
 
-Plug 'mhinz/vim-signify'
+  Plug 'mhinz/vim-signify'
 
-Plug 'scrooloose/nerdcommenter'
+  Plug 'scrooloose/nerdcommenter'
 
-Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/nerdtree'
 
-Plug 'scrooloose/syntastic'
+  Plug 'scrooloose/syntastic'
 
-Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-fugitive'
 
-Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-surround'
 
-Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline'
 
-Plug 'vim-airline/vim-airline-themes'
+  Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
