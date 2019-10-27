@@ -3,7 +3,7 @@ if [[ ! -f "$HOME/antigen.zsh" ]]; then
     curl -L git.io/antigen > antigen.zsh
 fi
 
-source ~/antigen.zsh
+source "$HOME/antigen.zsh"
 
 antigen use oh-my-zsh
 
