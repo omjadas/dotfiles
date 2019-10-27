@@ -16,6 +16,10 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'scrooloose/syntastic'
 
+  Plug 'tmux-plugins/vim-tmux'
+
+  Plug 'tmux-plugins/vim-tmux-focus-events'
+
   Plug 'tpope/vim-fugitive'
 
   Plug 'tpope/vim-surround'
