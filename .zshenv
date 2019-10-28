@@ -17,7 +17,7 @@ export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
-export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
+export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history)
 
 export ZSH_COLORIZE_STYLE=solarized-dark
 

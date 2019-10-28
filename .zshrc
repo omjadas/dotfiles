@@ -43,10 +43,12 @@ bindkey '^\n' autosuggest-execute
 # Source aliases
 [[ -f "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 
+eval "$(direnv hook zsh)"
+
 if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
-    eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
+    eval "$(dircolors ~/.dircolors/dircolors.ansi-dark)"
 else
-    eval $(gdircolors ~/.dircolors/dircolors.ansi-dark)
+    eval "$(gdircolors ~/.dircolors/dircolors.ansi-dark)"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
