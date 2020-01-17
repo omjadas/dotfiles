@@ -7,13 +7,17 @@ source "$HOME/antigen.zsh"
 
 antigen use oh-my-zsh
 
+antigen bundle ansible
 antigen bundle archlinux
 antigen bundle colorize
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle fasd
 antigen bundle git
+antigen bundle kubectl
+antigen bundle minikube
 antigen bundle npm
+antigen bundle pip
 antigen bundle pipenv
 antigen bundle rails
 antigen bundle sudo
