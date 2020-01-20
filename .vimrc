@@ -6,9 +6,13 @@ endif
 
 call plug#begin('$HOME/.vim/plugged')
 
+  Plug 'easymotion/vim-easymotion'
+
   Plug 'lifepillar/vim-solarized8'
 
   Plug 'mhinz/vim-signify'
+
+  Plug 'michaeljsmith/vim-indent-object'
 
   Plug 'scrooloose/nerdcommenter'
 
