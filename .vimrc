@@ -6,9 +6,13 @@ endif
 
 call plug#begin('$HOME/.vim/plugged')
 
+  Plug 'easymotion/vim-easymotion'
+
   Plug 'lifepillar/vim-solarized8'
 
   Plug 'mhinz/vim-signify'
+
+  Plug 'michaeljsmith/vim-indent-object'
 
   Plug 'scrooloose/nerdcommenter'
 
@@ -21,6 +25,8 @@ call plug#begin('$HOME/.vim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
 
   Plug 'tpope/vim-fugitive'
+
+  Plug 'tpope/vim-repeat'
 
   Plug 'tpope/vim-surround'
 
