@@ -26,6 +26,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'tpope/vim-fugitive'
 
+  Plug 'tpope/vim-repeat'
+
   Plug 'tpope/vim-surround'
 
   Plug 'vim-airline/vim-airline'
