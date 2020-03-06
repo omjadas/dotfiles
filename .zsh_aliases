@@ -15,6 +15,7 @@ update () {
     git-ignore -u
     ~/.tmux/plugins/tpm/bin/update_plugins all
     vim -c "PlugUpdate | q | q"
+    nvim -c "PlugUpdate | q | q"
 }
 
 if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
