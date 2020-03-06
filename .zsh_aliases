@@ -1,6 +1,6 @@
 update () {
     if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
-        if [[ "$DISTRO" = "Arch" || "$DISTRO" = "Manjaro-ARM" ]]; then
+        if [[ "$DISTRO" = "Arch" || "$DISTRO" = "ManjaroLinux" || "$DISTRO" = "Manjaro-ARM" ]]; then
             yay -Syu
         elif [[ "$DISTRO" = "Ubuntu" || "$DISTRO" = "Debian" ]]; then
             sudo apt update && sudo apt dist-upgrade
