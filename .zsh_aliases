@@ -26,8 +26,8 @@ alias gi='git-ignore'
 
 alias ls='exa'
 alias la='exa -a'
-alias ll='exa -lg --git --time-style long-iso'
-alias lla='exa -alg --git --time-style long-iso'
+alias ll='exa -lg --git --icons --time-style long-iso'
+alias lla='exa -alg --git --icons --time-style long-iso'
 
 alias less='cless'
 alias cat='ccat'
