@@ -24,9 +24,10 @@ fi
 
 alias gi='git-ignore'
 
-alias la='ls -a'
-alias ll='ls -lh'
-alias lla='ls -alh'
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -lg --git --time-style long-iso'
+alias lla='exa -alg --git --time-style long-iso'
 
 alias less='cless'
 alias cat='ccat'
