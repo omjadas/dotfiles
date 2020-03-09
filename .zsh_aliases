@@ -18,10 +18,6 @@ update () {
     nvim -c "PlugUpdate | q | q"
 }
 
-if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
-    alias ls='gls --color'
-fi
-
 alias gi='git-ignore'
 
 alias ls='exa'
