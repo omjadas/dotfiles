@@ -52,6 +52,20 @@ call plug#begin('$HOME/.vim/plugged')
 
 call plug#end()
 
+let g:coc_global_extensions = [
+  \"coc-clangd",
+  \"coc-css",
+  \"coc-eslint",
+  \"coc-git",
+  \"coc-html",
+  \"coc-json",
+  \"coc-python",
+  \"coc-tsserver",
+  \"coc-vimlsp",
+  \"coc-xml",
+  \"coc-yaml",
+\]
+
 set number
 
 set termguicolors
