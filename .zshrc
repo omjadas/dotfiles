@@ -41,6 +41,7 @@ antigen theme romkatv/powerlevel10k
 
 antigen apply
 
+bindkey -v
 bindkey '^ ' autosuggest-accept
 bindkey '^\n' autosuggest-execute
 
