@@ -12,6 +12,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'glts/vim-textobj-comment'
 
+  Plug 'kana/vim-textobj-entire'
+
   Plug 'kana/vim-textobj-user'
 
   Plug 'lifepillar/vim-solarized8'
