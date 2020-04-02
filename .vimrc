@@ -6,13 +6,21 @@ endif
 
 call plug#begin('$HOME/.vim/plugged')
 
+  Plug 'bps/vim-textobj-python'
+
   Plug 'easymotion/vim-easymotion'
+
+  Plug 'glts/vim-textobj-comment'
+
+  Plug 'kana/vim-textobj-user'
 
   Plug 'lifepillar/vim-solarized8'
 
   Plug 'mhinz/vim-signify'
 
   Plug 'michaeljsmith/vim-indent-object'
+
+  Plug 'nelstrom/vim-textobj-rubyblock'
 
   Plug 'scrooloose/nerdcommenter'
 
@@ -33,6 +41,8 @@ call plug#begin('$HOME/.vim/plugged')
   Plug 'vim-airline/vim-airline'
 
   Plug 'vim-airline/vim-airline-themes'
+
+  Plug 'wellle/targets.vim'
 
 call plug#end()
 
