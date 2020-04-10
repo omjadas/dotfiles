@@ -24,19 +24,21 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'nelstrom/vim-textobj-rubyblock'
 
-  Plug 'scrooloose/nerdcommenter'
-
-  Plug 'scrooloose/nerdtree'
-
-  Plug 'scrooloose/syntastic'
+  Plug 'preservim/nerdtree'
 
   Plug 'tmux-plugins/vim-tmux'
 
   Plug 'tmux-plugins/vim-tmux-focus-events'
 
+  Plug 'tpope/vim-commentary'
+
   Plug 'tpope/vim-fugitive'
 
   Plug 'tpope/vim-repeat'
+
+  Plug 'tpope/vim-sensible'
+
+  Plug 'tpope/vim-sleuth'
 
   Plug 'tpope/vim-surround'
 

@@ -20,6 +20,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'nelstrom/vim-textobj-rubyblock'
 
+  Plug 'tpope/vim-commentary'
+
   Plug 'tpope/vim-repeat'
 
   Plug 'tpope/vim-surround'
