@@ -16,6 +16,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'kana/vim-textobj-user'
 
+  Plug 'kevinoid/vim-jsonc'
+
   Plug 'lifepillar/vim-solarized8'
 
   Plug 'mhinz/vim-signify'
