@@ -28,6 +28,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'preservim/nerdtree'
 
+  Plug 'sheerun/vim-polyglot'
+
   Plug 'tmux-plugins/vim-tmux'
 
   Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -55,11 +57,22 @@ call plug#end()
 let g:coc_global_extensions = [
   \"coc-clangd",
   \"coc-css",
+  \"coc-docker",
   \"coc-eslint",
   \"coc-git",
+  \"coc-gitignore",
   \"coc-html",
+  \"coc-inline-jest",
+  \"coc-java",
   \"coc-json",
+  \"coc-markdownlint",
+  \"coc-marketplace",
+  \"coc-omnisharp",
+  \"coc-pairs",
   \"coc-python",
+  \"coc-sh",
+  \"coc-solargraph",
+  \"coc-sql",
   \"coc-tsserver",
   \"coc-vimlsp",
   \"coc-xml",
@@ -67,6 +80,7 @@ let g:coc_global_extensions = [
 \]
 
 set number
+set relativenumber
 
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
