@@ -14,6 +14,10 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'glts/vim-textobj-comment'
 
+  Plug 'junegunn/fzf'
+
+  Plug 'junegunn/fzf.vim'
+
   Plug 'kana/vim-textobj-entire'
 
   Plug 'kana/vim-textobj-user'
