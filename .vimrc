@@ -10,6 +10,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'easymotion/vim-easymotion'
 
+  Plug 'edkolev/tmuxline.vim'
+
   Plug 'glts/vim-textobj-comment'
 
   Plug 'kana/vim-textobj-entire'
@@ -58,7 +60,7 @@ call plug#begin('$HOME/.vim/plugged')
 
 call plug#end()
 
-let g:coc_global_extensions = [
+let g:coc_global_extensions=[
   \"coc-clangd",
   \"coc-css",
   \"coc-docker",
@@ -111,12 +113,14 @@ set laststatus=2
 
 let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 let g:airline#extensions#coc#enabled=1
+let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#tabline#enabled=1
 
 let g:solarized_termtrans=1
 
-let g:indentLine_char = "▏"
+let g:indentLine_char="▏"
 
 " coc.nvim
 
