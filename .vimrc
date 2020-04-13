@@ -108,7 +108,7 @@ set laststatus=2
 
 let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
-let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#coc#enabled=1
 let g:airline#extensions#tabline#enabled=1
 
 " coc.nvim
@@ -232,22 +232,22 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<CR>
 " Manage extensions.
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>e  :<C-u>CocList extensions<CR>
 " Show commands.
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<CR>
 " Find symbol of current document.
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
 " Show marketplace.
-nnoremap <silent> <space>m  :<C-u>CocList marketplace<cr>
+nnoremap <silent> <space>m  :<C-u>CocList marketplace<CR>
 " Show yanks. 
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 " Search workspace symbols.
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<CR>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<cr>
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<cr>
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent> <space>p  :<C-u>CocListResume<cr>
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>

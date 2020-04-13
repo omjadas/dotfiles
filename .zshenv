@@ -1,3 +1,6 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
 export BROWSER='google-chrome-stable'
 export EDITOR='vim'
 export WIN_HOME='/mnt/c/Users/Omja Das'

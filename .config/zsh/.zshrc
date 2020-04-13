@@ -46,7 +46,7 @@ bindkey '^ ' autosuggest-accept
 bindkey '^\n' autosuggest-execute
 
 # Source aliases
-[[ -f "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
+[[ -f "$ZDOTDIR/.zsh_aliases" ]] && source "$ZDOTDIR/.zsh_aliases"
 
 eval "$(direnv hook zsh)"
 
