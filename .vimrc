@@ -54,6 +54,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'wellle/targets.vim'
 
+  Plug 'Yggdroot/indentLine'
+
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -96,7 +98,6 @@ set background=dark
 set colorcolumn=80
 
 colorscheme solarized8
-let g:solarized_termtrans=1
 
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -106,10 +107,16 @@ set expandtab
 
 set laststatus=2
 
+" plugin settings
+
 let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
 let g:airline#extensions#coc#enabled=1
 let g:airline#extensions#tabline#enabled=1
+
+let g:solarized_termtrans=1
+
+let g:indentLine_char = "▏"
 
 " coc.nvim
 
