@@ -6,13 +6,13 @@ endif
 
 call plug#begin('$HOME/.vim/plugged')
 
-  Plug 'bps/vim-textobj-python'
-
   Plug 'easymotion/vim-easymotion'
 
   Plug 'edkolev/tmuxline.vim'
 
   Plug 'glts/vim-textobj-comment'
+
+  Plug 'jeetsukumaran/vim-pythonsense'
 
   Plug 'junegunn/fzf'
 
