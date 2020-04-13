@@ -25,11 +25,13 @@ antigen bundle tmux
 antigen bundle tmuxinator
 antigen bundle vscode
 
-antigen bundle laggardkernel/git-ignore
+# antigen bundle laggardkernel/git-ignore
 
 antigen bundle lukechilds/zsh-nvm
 
 antigen bundle MichaelAquilina/zsh-you-should-use
+
+antigen bundle omjadas/yadm-zsh
 
 antigen bundle zlsun/solarized-man
 
