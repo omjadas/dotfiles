@@ -35,6 +35,8 @@ antigen bundle omjadas/yadm-zsh
 
 antigen bundle reegnz/jq-zsh-plugin
 
+antigen bundle ytakahashi/igit
+
 antigen bundle zlsun/solarized-man
 
 antigen bundle zsh-users/zsh-autosuggestions
