@@ -118,9 +118,12 @@ let g:airline#extensions#coc#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#tabline#enabled=1
 
+let g:csv_no_conceal=1
+
 let g:solarized_termtrans=1
 
 let g:indentLine_char="▏"
+let g:indentLine_concealcursor="nc"
 
 " coc.nvim
 
