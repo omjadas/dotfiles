@@ -38,6 +38,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'sheerun/vim-polyglot'
 
+  Plug 'svermeulen/vim-subversive'
+
   Plug 'tmux-plugins/vim-tmux'
 
   Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -63,32 +65,6 @@ call plug#begin('$HOME/.vim/plugged')
   Plug 'Yggdroot/indentLine'
 
 call plug#end()
-
-let g:coc_global_extensions=[
-  \"coc-clangd",
-  \"coc-css",
-  \"coc-docker",
-  \"coc-eslint",
-  \"coc-git",
-  \"coc-gitignore",
-  \"coc-html",
-  \"coc-inline-jest",
-  \"coc-java",
-  \"coc-json",
-  \"coc-markdownlint",
-  \"coc-marketplace",
-  \"coc-omnisharp",
-  \"coc-pairs",
-  \"coc-python",
-  \"coc-sh",
-  \"coc-solargraph",
-  \"coc-sql",
-  \"coc-tsserver",
-  \"coc-vimlsp",
-  \"coc-xml",
-  \"coc-yaml",
-  \"coc-yank",
-\]
 
 set number
 set relativenumber
@@ -122,12 +98,47 @@ let g:airline#extensions#coc#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#tabline#enabled=1
 
+let g:coc_global_extensions=[
+  \"coc-clangd",
+  \"coc-css",
+  \"coc-docker",
+  \"coc-eslint",
+  \"coc-git",
+  \"coc-gitignore",
+  \"coc-html",
+  \"coc-inline-jest",
+  \"coc-java",
+  \"coc-json",
+  \"coc-markdownlint",
+  \"coc-marketplace",
+  \"coc-omnisharp",
+  \"coc-pairs",
+  \"coc-python",
+  \"coc-sh",
+  \"coc-solargraph",
+  \"coc-sql",
+  \"coc-tsserver",
+  \"coc-vimlsp",
+  \"coc-xml",
+  \"coc-yaml",
+  \"coc-yank",
+\]
+
 let g:csv_no_conceal=1
 
 let g:solarized_termtrans=1
 
 let g:indentLine_char="▏"
 let g:indentLine_concealcursor="nc"
+
+" vim-subversive
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+nmap S <plug>(SubversiveSubstituteToEndOfLine)
+
+nmap <leader>s <plug>(SubversiveSubstituteRange)
+xmap <leader>s <plug>(SubversiveSubstituteRange)
+nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
 
 " coc.nvim
 
