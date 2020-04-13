@@ -33,6 +33,8 @@ antigen bundle MichaelAquilina/zsh-you-should-use
 
 antigen bundle omjadas/yadm-zsh
 
+antigen bundle reegnz/jq-zsh-plugin
+
 antigen bundle zlsun/solarized-man
 
 antigen bundle zsh-users/zsh-autosuggestions
@@ -46,6 +48,7 @@ antigen apply
 bindkey -v
 bindkey '^ ' autosuggest-accept
 bindkey '^\n' autosuggest-execute
+bindkey '^j' jq-complete
 
 # Source aliases
 [[ -f "$ZDOTDIR/.zsh_aliases" ]] && source "$ZDOTDIR/.zsh_aliases"
