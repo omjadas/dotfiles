@@ -8,9 +8,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'asvetliakov/vim-easymotion'
 
-  Plug 'bps/vim-textobj-python'
-
   Plug 'glts/vim-textobj-comment'
+
+  Plug 'jeetsukumaran/vim-pythonsense'
 
   Plug 'kana/vim-textobj-entire'
 
