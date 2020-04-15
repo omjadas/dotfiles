@@ -5,17 +5,16 @@ export BROWSER='google-chrome-stable'
 export EDITOR='vim'
 export WIN_HOME='/mnt/c/Users/Omja Das'
 
-export SYSTEM_TYPE=$(uname -s)
+export SYSTEM_TYPE="$(uname -s)"
 
 # Linux specific config
-if [[ $SYSTEM_TYPE = "Linux" ]]; then
+if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     export DISTRO=$(lsb_release -is)
     # Add wsl-open as browser for WSL
-    if [[ $(uname -r) =~ (m|M)icrosoft ]]; then
+    if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
         export BROWSER=wsl-open
     fi
 fi
-
 
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
@@ -27,6 +26,9 @@ export ZSH_COLORIZE_STYLE=solarized-dark
 
 export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_AUTOCONNECT=false
+
+# Source secrets
+[[ -f "$ZDOTDIR/.zsh_secrets" ]] && source "$ZDOTDIR/.zsh_secrets"
 
 # Add ~/.local/bin to path
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
