@@ -36,6 +36,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'preservim/nerdtree'
 
+  Plug 'runoshun/vim-alloy'
+
   Plug 'sheerun/vim-polyglot'
 
   Plug 'svermeulen/vim-subversive'
