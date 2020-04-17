@@ -63,5 +63,5 @@ else
     eval "$(gdircolors ~/.dircolors/dircolors.ansi-dark)"
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# To customize prompt, run `p10k configure` or edit $XDG_CONFIG_HOME/.p10k.zsh.
 [[ -f "$XDG_CONFIG_HOME/p10k/p10k.zsh" ]] && source "$XDG_CONFIG_HOME/p10k/p10k.zsh"
