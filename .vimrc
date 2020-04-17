@@ -14,6 +14,8 @@ call plug#begin('$HOME/.vim/plugged')
 
   Plug 'jeetsukumaran/vim-pythonsense'
 
+  Plug 'jonsmithers/pivotal-tracker-fzf.vim'
+
   Plug 'joshdick/onedark.vim'
 
   Plug 'junegunn/fzf'
