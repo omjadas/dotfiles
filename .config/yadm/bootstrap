@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+rust () {
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    rustup default stable
+    rustup component add rls rustfmt
+}
+
 cd "$HOME"
 yadm submodule update --recursive --init
 
@@ -30,17 +36,20 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     elif command -v apt >/dev/null; then
         echo "Updating packages"
         sudo apt udpate && sudo apt dist-upgrade
+
         echo "Installing packages"
-        sudo apt install clang cloc default-jdk fasd git jq llvm lsb-release \
-            neofetch neovim nodejs npm  plantuml pylint3 python \
-            python-autopep8 python3 python3-pygments python3-rope  ruby tmux \
+        sudo apt install clang cloc default-jdk direnv fasd git jq llvm \
+            lsb-release neofetch neovim nodejs npm plantuml pylint3 python \
+            python-autopep8 python3 python3-pygments python3-rope ruby tmux \
             unzip vifm vim zip zsh
+        rust
     elif command -v >/dev/null 2>&1; then
         echo "Updating packages"
         sudo dnf upgrade
+        rust
     fi
     if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
-        ln -s /mnt/c/Users/Omja\ Das/.ssh ~/.ssh
+        ln -s /mnt/c/Users/Omja\ Das/.ssh "$HOME"
         sudo npm install -g wsl-open
     fi
 # macOS specific config
@@ -56,3 +65,4 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     fi
 fi
 
+vim -c "PlugClean | PlugUpdate | q | q"

@@ -1,6 +1,6 @@
 # Install antigen if not found
 if [[ ! -f "$HOME/antigen.zsh" ]]; then
-    curl -L git.io/antigen > antigen.zsh
+    curl -L git.io/antigen > "$HOME/antigen.zsh"
 fi
 
 source "$HOME/antigen.zsh"
