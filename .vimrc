@@ -114,6 +114,7 @@ let g:coc_global_extensions=[
   \"coc-html",
   \"coc-inline-jest",
   \"coc-java",
+  \"coc-jira-complete",
   \"coc-json",
   \"coc-markdownlint",
   \"coc-marketplace",
