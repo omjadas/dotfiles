@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+cd "$HOME"
+yadm submodule update --recursive --init
+
+SYSTEM_TYPE=$(uname -s)
+
+# Linux specific config
+if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
+    if command -v pacman >/dev/null 2>&1; then
+        echo "Updating packages"
+        sudo pacman -Syu
+
+        echo "Installing packages"
+        sudo pacman -S autopep8 base-devel clang cloc diff-so-fancy dlang-dmd \
+            exa fasd fzf git go hub jdk-openjdk jq kotlin llvm lsb-release \
+            neofetch neovim nodejs npm openssh plantuml python python2 \
+            python-pip python-pipenv python-rope python-pylint pygmentize \
+            pyenv ruby ruby-irb rustup tmux unzip vifm zip
+        rustup default stable
+        rustup component add rls rustfmt
+
+        if ! command -v yay >/dev/null 2>&1; then
+            echo "Installing yay"
+            git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
+        fi
+
+        yay -S direnv github-cli kompose-bin ngrok tmuxinator yadm
+    elif command -v apt >/dev/null; then
+        echo "Updating packages"
+        sudo apt udpate && sudo apt dist-upgrade
+    elif command -v >/dev/null 2>&1; then
+        echo "Updating packages"
+        sudo dnf upgrade
+    fi
+    if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
+        ln -s /mnt/c/Users/Omja\ Das/.ssh ~/.ssh
+        sudo npm install -g wsl-open
+    fi
+# macOS specific config
+elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
+    if ! command -v brew >/dev/null 2>&1; then
+        echo "Installing homebrew"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    fi
+
+    if [[ -f "$HOME/.Brewfile" ]]; then
+        echo "Updating homebrew bundle"
+        brew bundle --global
+    fi
+fi
+
