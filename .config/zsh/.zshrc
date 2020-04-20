@@ -3,6 +3,13 @@ if [[ ! -f "$HOME/antigen.zsh" ]]; then
     curl -L git.io/antigen > "$HOME/antigen.zsh"
 fi
 
+autoload -U compinit
+compinit
+
+if command -v dt >/dev/null 2>&1;
+    eval "$(dt completion)"
+fi
+
 source "$HOME/antigen.zsh"
 
 antigen use oh-my-zsh
@@ -58,7 +65,9 @@ bindkey '^j' jq-complete
 # Source aliases
 [[ -f "$ZDOTDIR/.zsh_aliases" ]] && source "$ZDOTDIR/.zsh_aliases"
 
-eval "$(direnv hook zsh)"
+if command -v direnv >/dev/null 2>&1;
+    eval "$(direnv hook zsh)"
+fi
 
 if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     eval "$(dircolors ~/.dircolors/dircolors.ansi-dark)"
