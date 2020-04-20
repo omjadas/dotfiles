@@ -55,6 +55,9 @@ lctrl + alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - r         : yabai -m space --rotate 90
 shift + alt - r : yabai -m space --rotate 270
 
+# Toggle split
+shift + alt - t : yabai -m window --toggle split
+
 # Rotate on X and Y Axis
 shift + alt - x : yabai -m space --mirror x-axis
 shift + alt - y : yabai -m space --mirror y-axis
@@ -77,3 +80,4 @@ shift + lctrl + alt - r :
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
+
