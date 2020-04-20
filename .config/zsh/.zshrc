@@ -6,7 +6,7 @@ fi
 autoload -U compinit
 compinit
 
-if command -v dt >/dev/null 2>&1;
+if command -v dt >/dev/null 2>&1; then
     eval "$(dt completion)"
 fi
 
@@ -65,7 +65,7 @@ bindkey '^j' jq-complete
 # Source aliases
 [[ -f "$ZDOTDIR/.zsh_aliases" ]] && source "$ZDOTDIR/.zsh_aliases"
 
-if command -v direnv >/dev/null 2>&1;
+if command -v direnv >/dev/null 2>&1; then
     eval "$(direnv hook zsh)"
 fi
 
