@@ -18,11 +18,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S autopep8 base-devel clang cloc diff-so-fancy dlang-dmd \
-            exa fasd fzf git go httpie hub jdk-openjdk jq kotlin llvm \
-            lsb-release neofetch neovim nodejs npm openssh plantuml python \
-            python-pip python-pipenv python-rope python-pylint pygmentize \
-            pyenv ruby ruby-irb rustup tmux unzip vifm vim zip zsh \
+        sudo pacman -S autopep8 base-devel bat clang cloc diff-so-fancy \
+            dlang-dmd exa fasd fzf git go httpie hub jdk-openjdk jq kotlin \
+            llvm lsb-release neofetch neovim nodejs npm openssh plantuml \
+            python python-pip python-pipenv python-rope python-pylint \
+            pygmentize pyenv ruby ruby-irb rustup tmux unzip vifm vim zip zsh \
             zsh-completions
         rustup default stable
         rustup component add rls rustfmt
@@ -38,7 +38,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo apt udpate && sudo apt dist-upgrade
 
         echo "Installing packages"
-        sudo apt install clang cloc default-jdk direnv fasd git httpie jq \
+        sudo apt install bat clang cloc default-jdk direnv fasd git httpie jq \
             llvm lsb-release neofetch neovim nodejs npm plantuml pylint3 \
             python-autopep8 python3 python3-pygments python3-rope ruby tmux \
             unzip vifm vim zip zsh
