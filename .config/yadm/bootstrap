@@ -29,10 +29,14 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         if ! command -v yay >/dev/null 2>&1; then
             echo "Installing yay"
-            git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
+            git clone https://aur.archlinux.org/yay.git
+            cd yay
+            makepkg -si
+            cd ..
+            rm -rf yay
         fi
 
-        yay -S direnv github-cli kompose-bin ngrok tmuxinator yadm
+        yay -S direnv github-cli go-jira kompose-bin ngrok tmuxinator yadm
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt udpate && sudo apt dist-upgrade
