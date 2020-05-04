@@ -95,6 +95,8 @@ set expandtab
 
 set laststatus=2
 
+set mouse=a
+
 " plugin settings
 
 let g:airline_powerline_fonts=1
