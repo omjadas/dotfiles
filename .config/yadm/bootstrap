@@ -23,7 +23,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             llvm lsb-release neofetch neovim nodejs npm openssh plantuml \
             python python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv ripgrep ruby ruby-irb rustup tmux unzip vifm vim \
-            zip zsh zsh-completions
+            watchman zip zsh zsh-completions
         rustup default stable
         rustup component add rls rustfmt
 
