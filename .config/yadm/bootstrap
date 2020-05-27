@@ -22,8 +22,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             dlang-dmd exa fasd fzf git go httpie hub jdk-openjdk jq kotlin \
             llvm lsb-release neofetch neovim nodejs npm openssh plantuml \
             python python-pip python-pipenv python-rope python-pylint \
-            pygmentize pyenv ripgrep ruby ruby-irb rustup tmux unzip vifm vim \
-            watchman zip zsh zsh-completions
+            pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt tmux unzip \
+            vifm vim watchman zip zsh zsh-completions
         rustup default stable
         rustup component add rls rustfmt
 
