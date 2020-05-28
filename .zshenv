@@ -4,18 +4,18 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
-export BROWSER='google-chrome-stable'
 export EDITOR='vim'
-export WIN_HOME='/mnt/c/Users/Omja Das'
 
 export SYSTEM_TYPE="$(uname -s)"
 
 # Linux specific config
 if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
+    export BROWSER='google-chrome-stable'
     export DISTRO=$(lsb_release -is)
     # Add wsl-open as browser for WSL
     if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
         export BROWSER=wsl-open
+        export WIN_HOME='/mnt/c/Users/Omja Das'
     fi
 fi
 

@@ -6,10 +6,6 @@ fi
 autoload -U compinit
 compinit
 
-if command -v dt >/dev/null 2>&1; then
-    eval "$(dt completion)"
-fi
-
 source "$HOME/antigen.zsh"
 
 antigen use oh-my-zsh
