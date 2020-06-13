@@ -14,8 +14,8 @@ update () {
     nvm upgrade
     git-ignore -u
     ~/.tmux/plugins/tpm/bin/update_plugins all
-    vim -c "PlugUpdate | q | q"
-    nvim -c "PlugUpdate | q | q"
+    vim -c "PlugUpdate | qa"
+    nvim -c "PlugUpdate | qa"
 }
 
 alias gi='git-ignore'
