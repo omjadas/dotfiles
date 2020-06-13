@@ -32,5 +32,5 @@ alias vi='vim'
 
 alias sudo='sudo '
 
-alias mount='gocryptfs ~/Dropbox\ \(Lens10\ Pty\ Ltd\)/Omja\ Das\ Desktop/Files ~/Private'
-alias unmount='umount ~/Private'
+alias gomount='gocryptfs ~/Dropbox\ \(Lens10\ Pty\ Ltd\)/Omja\ Das\ Desktop/Files ~/Private'
+alias gounmount='umount ~/Private'
