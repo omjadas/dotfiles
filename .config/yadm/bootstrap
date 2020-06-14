@@ -75,4 +75,4 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     fi
 fi
 
-vim -c "PlugClean | PlugUpdate | q | q"
+vim -c "PlugClean | PlugUpdate | qa"
