@@ -29,3 +29,5 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'wellle/targets.vim'
 
 call plug#end()
+
+let g:plug_threads=8

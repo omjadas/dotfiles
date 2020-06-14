@@ -135,6 +135,8 @@ let g:coc_global_extensions=[
 
 let g:csv_no_conceal=1
 
+let g:plug_threads=8
+
 let g:solarized_termtrans=1
 
 let g:indentLine_char="▏"

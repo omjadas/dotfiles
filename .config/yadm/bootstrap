@@ -52,12 +52,15 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo dnf upgrade
         rust
     fi
+
+    # WSL specific config
     if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
         ln -s /mnt/c/Users/Omja\ Das/.ssh "$HOME"
         sudo npm install -g wsl-open
     fi
+
     sudo npm install -g @google/clasp commitizen cz-conventional-changelog \
-        eslint nodemon tsnode typescript
+        eslint nodemon ts-node typescript
     pip install --user togglCli
 # macOS specific config
 elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
