@@ -20,11 +20,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         echo "Installing packages"
         sudo pacman -S atool autopep8 base-devel bat clang cloc diff-so-fancy \
             dlang-dmd exa fasd fzf git go httpie jdk-openjdk jq kotlin llvm \
-            lsb-release lsof man-db maven moreutils neofetch neovim nodejs \
-            npm openssh pandoc plantuml python python-pip python-pipenv \
-            python-rope python-pylint pygmentize pyenv ripgrep ruby ruby-irb \
-            rustup shfmt tmux unzip vifm vim watchman xdg-utils zip zsh \
-            zsh-completions
+            lsb-release lsof man-db maven moreutils mosh neofetch neovim \
+            nodejs npm openssh pandoc plantuml python python-pip \
+            python-pipenv python-rope python-pylint pygmentize pyenv ripgrep \
+            ruby ruby-irb rustup shfmt tmux unzip vifm vim watchman xdg-utils \
+            zip zsh zsh-completions
         rustup default stable
         rustup component add rls rustfmt
 
@@ -44,9 +44,10 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo apt install atool bat clang cloc default-jdk direnv fasd git \
-            httpie jq llvm lsb-release moreutils neofetch neovim nodejs npm \
-            pandoc plantuml pylint3 python-autopep8 python3 python3-pygments \
-            python3-rope ripgrep ruby tmux unzip vifm vim zip zsh
+            httpie jq llvm lsb-release moreutils mosh neofetch neovim nodejs \
+            npm pandoc plantuml pylint3 python-autopep8 python3 \
+            python3-pygments python3-rope ripgrep ruby tmux unzip vifm vim \
+            zip zsh
         rust
     elif command -v dnf >/dev/null 2>&1; then
         echo "Updating packages"
