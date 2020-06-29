@@ -36,5 +36,8 @@ export ZSH_TMUX_AUTOCONNECT=false
 # Add ~/.local/bin to path
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
 
+# Add ~/.cargo/bin to path
+[[ -d "$HOME/.cargo/bin" ]] && export PATH="$PATH:$HOME/.cargo/bin"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
