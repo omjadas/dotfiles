@@ -3,7 +3,7 @@
 rust () {
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     rustup default stable
-    rustup component add rls rustfmt
+    rustup component add clippy rls rust-analysis rust-src rustfmt
 }
 
 cd "$HOME"
@@ -26,7 +26,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rustup shfmt tmux unzip vifm vim watchman wget xdg-utils zip zsh \
             zsh-completions
         rustup default stable
-        rustup component add rls rustfmt
+        rustup component add clippy rls rust-analysis rust-src rustfmt
 
         if ! command -v yay >/dev/null 2>&1; then
             echo "Installing yay"
