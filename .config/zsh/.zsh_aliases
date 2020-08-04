@@ -10,6 +10,7 @@ update () {
     else
         brew update && brew upgrade && brew cask upgrade
     fi
+    rustup update
     antigen update
     nvm upgrade
     git-ignore -u
