@@ -37,8 +37,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S direnv github-cli go-jira kompose-bin ngrok mosh-git \
-            tmuxinator yadm
+        yay -S direnv github-cli go-jira hadolint-bin kompose-bin ngrok \
+            mosh-git tmuxinator yadm
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt udpate && sudo apt dist-upgrade
