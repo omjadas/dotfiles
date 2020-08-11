@@ -18,13 +18,13 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S atool autopep8 base-devel bat clang cloc diff-so-fancy \
-            dlang-dmd dotnet-sdk exa fasd fzf git go httpie jdk-openjdk jq \
-            kotlin llvm lsb-release lsof man-db maven minikube moreutils \
-            neofetch neovim nodejs npm openssh pandoc plantuml python \
-            python-pip python-pipenv python-rope python-pylint pygmentize \
-            pyenv ripgrep ruby ruby-irb rustup shfmt tmux unzip vifm vim \
-            watchman wget xdg-utils zip zsh zsh-completions
+        sudo pacman -S atool autopep8 aws-cli base-devel bat clang cloc \
+            diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git go httpie \
+            jdk-openjdk jq kotlin llvm lsb-release lsof man-db maven minikube \
+            moreutils neofetch neovim nodejs npm openssh pandoc plantuml \
+            python python-pip python-pipenv python-rope python-pylint \
+            pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt tmux unzip \
+            vifm vim watchman wget xdg-utils zip zsh zsh-completions
         rustup default stable
         rustup component add clippy rls rust-analysis rust-src rustfmt
 
@@ -37,8 +37,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S direnv github-cli go-jira hadolint-bin kompose-bin ngrok \
-            mosh-git tmuxinator yadm
+        yay -S direnv eksctl-bin github-cli-bin go-jira-bin hadolint-bin \
+            kompose-bin ngrok mosh-git tmuxinator yadm
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt udpate && sudo apt dist-upgrade
