@@ -19,10 +19,10 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo pacman -S ansible atool autopep8 aws-cli base-devel bat clang \
-            cloc diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git go \
-            httpie jdk-openjdk jq kotlin llvm lsb-release lsof man-db maven \
-            minikube moreutils neofetch neovim nodejs npm openssh pandoc \
-            plantuml python python-pip python-pipenv python-rope \
+            cloc diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git git-lfs \
+            go httpie jdk-openjdk jq kotlin llvm lsb-release lsof man-db \
+            maven minikube moreutils neofetch neovim nodejs npm openssh \
+            pandoc plantuml python python-pip python-pipenv python-rope \
             python-pylint pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt \
             terraform tmux unzip vifm vim watchman wget xdg-utils zip zsh \
             zsh-completions
