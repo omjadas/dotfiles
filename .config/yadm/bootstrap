@@ -18,13 +18,14 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S atool autopep8 aws-cli base-devel bat clang cloc \
-            diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git go httpie \
-            jdk-openjdk jq kotlin llvm lsb-release lsof man-db maven minikube \
-            moreutils neofetch neovim nodejs npm openssh pandoc plantuml \
-            python python-pip python-pipenv python-rope python-pylint \
-            pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt terraform \
-            tmux unzip vifm vim watchman wget xdg-utils zip zsh zsh-completions
+        sudo pacman -S ansible atool autopep8 aws-cli base-devel bat clang \
+            cloc diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git go \
+            httpie jdk-openjdk jq kotlin llvm lsb-release lsof man-db maven \
+            minikube moreutils neofetch neovim nodejs npm openssh pandoc \
+            plantuml python python-pip python-pipenv python-rope \
+            python-pylint pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt \
+            terraform tmux unzip vifm vim watchman wget xdg-utils zip zsh \
+            zsh-completions
         rustup default stable
         rustup component add clippy rls rust-analysis rust-src rustfmt
 
