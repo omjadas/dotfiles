@@ -28,6 +28,8 @@ antigen bundle tmux
 antigen bundle tmuxinator
 antigen bundle vscode
 
+antigen bundle akarzim/zsh-docker-aliases
+
 antigen bundle laggardkernel/git-ignore
 
 antigen bundle lukechilds/zsh-nvm
