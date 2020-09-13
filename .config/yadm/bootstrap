@@ -42,7 +42,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             go-jira-bin hadolint-bin kompose-bin ngrok mosh-git tmuxinator yadm
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
-        sudo apt udpate && sudo apt dist-upgrade
+        sudo apt update && sudo apt dist-upgrade
 
         echo "Installing packages"
         sudo apt install atool bat clang cloc default-jdk direnv fasd git \
@@ -80,4 +80,4 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
 fi
 
 vim -c "PlugClean | PlugUpdate | qa"
-nvim -c "PlugClean | PlugUpdate | qa""
+nvim -c "PlugClean | PlugUpdate | qa"
