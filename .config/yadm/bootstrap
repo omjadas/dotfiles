@@ -21,8 +21,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -S ansible atool autopep8 aws-cli base-devel bat clang \
             cloc diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git git-lfs \
             go httpie jdk-openjdk jq kotlin ldns llvm lsb-release lsof man-db \
-            maven minikube moreutils neofetch neovim nodejs npm openssh \
-            pandoc plantuml python python-pip python-pipenv python-rope \
+            maven minikube moreutils neofetch nodejs npm openssh pandoc \
+            plantuml python python-pip python-pipenv python-rope \
             python-pylint pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt \
             terraform tmux unzip vifm vim watchman wget xdg-utils zip zsh \
             zsh-completions
@@ -39,7 +39,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         fi
 
         yay -S azure-cli direnv eksctl-bin github-cli-bin google-cloud-sdk \
-            go-jira-bin hadolint-bin kompose-bin ngrok mosh-git tmuxinator yadm
+            go-jira-bin hadolint-bin kompose-bin ngrok mosh-git \
+            neovim-nightly tmuxinator yadm
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
