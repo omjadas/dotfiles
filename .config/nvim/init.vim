@@ -8,6 +8,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'asvetliakov/vim-easymotion'
 
+  Plug 'chaoren/vim-wordmotion'
+
   Plug 'glts/vim-textobj-comment'
 
   Plug 'jeetsukumaran/vim-pythonsense'

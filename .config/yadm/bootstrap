@@ -19,13 +19,13 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo pacman -S ansible atool autopep8 aws-cli base-devel bat clang \
-            cloc diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git git-lfs \
-            go httpie jdk-openjdk jq kotlin ldns llvm lsb-release lsof man-db \
-            maven minikube moreutils neofetch neovim nodejs npm openssh \
-            pandoc plantuml python python-pip python-pipenv python-rope \
-            python-pylint pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt \
-            terraform tmux unzip vifm vim watchman wget xdg-utils zip zsh \
-            zsh-completions
+            cloc diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git \
+            github-cli git-lfs go httpie jdk-openjdk jq kotlin ldns llvm \
+            lsb-release lsof man-db maven minikube moreutils neofetch nodejs \
+            npm openssh pandoc plantuml python python-pip python-pipenv \
+            python-rope python-pylint pygmentize pyenv ripgrep ruby ruby-irb \
+            rustup shfmt terraform tmux unzip vifm vim watchman wget \
+            xdg-utils zip zsh zsh-completions
         rustup default stable
         rustup component add clippy rls rust-analysis rust-src rustfmt
 
@@ -38,8 +38,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S azure-cli direnv eksctl-bin github-cli-bin google-cloud-sdk \
-            go-jira-bin hadolint-bin kompose-bin ngrok mosh-git tmuxinator yadm
+        yay -S azure-cli direnv eksctl-bin go-jira-bin google-cloud-sdk \
+            hadolint-bin kompose-bin mosh-git neovim-nightly ngrok tmuxinator \
+            yadm yay
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade

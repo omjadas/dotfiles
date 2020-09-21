@@ -6,6 +6,8 @@ endif
 
 call plug#begin('$HOME/.vim/plugged')
 
+  Plug 'chaoren/vim-wordmotion'
+
   Plug 'easymotion/vim-easymotion'
 
   Plug 'edkolev/tmuxline.vim'
