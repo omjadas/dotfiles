@@ -35,6 +35,11 @@ alias llat='lla --tree'
 alias less='cless'
 alias cat='bat'
 
+if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
+    alias gcc='/usr/local/bin/gcc-10'
+    alias g++='/usr/local/bin/g++-10'
+fi
+
 alias vi='vim'
 
 alias sudo='sudo '
