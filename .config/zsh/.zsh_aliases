@@ -8,7 +8,7 @@ update () {
             sudo dnf upgrade
         fi
     else
-        brew update && brew upgrade && brew cask upgrade
+        brew update && brew upgrade && brew upgrade --cask
     fi
     rustup update
     antigen update
