@@ -18,14 +18,15 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S ansible atool autopep8 aws-cli base-devel bat clang \
-            cloc diff-so-fancy dlang-dmd dotnet-sdk exa fasd fzf git \
-            github-cli git-lfs go httpie jdk-openjdk jq kotlin ldns llvm \
-            lsb-release lsof man-db maven minikube moreutils neofetch nodejs \
-            npm openmpi openssh pandoc plantuml python python-pip \
-            python-pipenv python-rope python-pylint pygmentize pyenv ripgrep \
-            ruby ruby-irb rustup shfmt terraform tmux unzip vifm vim watchman \
-            wget xdg-utils zip zsh zsh-completions
+        sudo pacman -S ansible atool autopep8 aws-cli base-devel bat \
+            cabal-install clang cloc diff-so-fancy dlang-dmd dotnet-sdk exa \
+            fasd fzf ghc ghc-static git github-cli git-lfs go httpie \
+            jdk-openjdk jq kotlin ldns llvm lsb-release lsof man-db maven \
+            minikube moreutils neofetch nodejs npm openmpi openssh pandoc \
+            plantuml python python-pip python-pipenv python-rope \
+            python-pylint pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt \
+            stack terraform tmux unzip vifm vim watchman wget xdg-utils zip \
+            zsh zsh-completions
         rustup default stable
         rustup component add clippy rls rust-analysis rust-src rustfmt
 
@@ -47,8 +48,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo apt install atool bat build-essential clang cloc default-jdk \
-            direnv fasd git httpie jq llvm lsb-release moreutils mosh \
-            neofetch neovim nodejs npm pandoc plantuml pylint3 \
+            direnv fasd git haskell-platform httpie jq llvm lsb-release \
+            moreutils mosh neofetch neovim nodejs npm pandoc plantuml pylint3 \
             python3-autopep8 python3 python3-pygments python3-rope ripgrep \
             ruby tmux unzip vifm vim zip zsh
         rust
