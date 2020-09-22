@@ -16,6 +16,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'kana/vim-textobj-entire'
 
+  Plug 'kana/vim-textobj-line'
+
   Plug 'kana/vim-textobj-user'
 
   Plug 'michaeljsmith/vim-indent-object'
