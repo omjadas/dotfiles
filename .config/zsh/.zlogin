@@ -38,3 +38,5 @@ group_lazy_load() {
 group_lazy_load "$HOME/.rvm/scripts/rvm" rvm ruby gem bundle irb rake rails solargraph
 
 unset -f group_lazy_load
+
+[[ -f "$HOME/.jabba/jabba.sh" ]] && source "$HOME/.jabba/jabba.sh"
