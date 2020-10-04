@@ -39,9 +39,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S azure-cli direnv eksctl-bin go-jira-bin google-cloud-sdk \
-            hadolint-bin kompose-bin mosh-git neovim-nightly ngrok tmuxinator \
-            yadm yay
+        yay -S azure-cli bat-extras-git direnv eksctl-bin git-delta-bin \
+            go-jira-bin google-cloud-sdk hadolint-bin kompose-bin mosh-git \
+            neovim-nightly ngrok tmuxinator yadm yay
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
