@@ -19,11 +19,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo pacman -S ansible atool autopep8 aws-cli base-devel bat \
-            cabal-install clang cloc diff-so-fancy dlang-dmd dotnet-sdk exa \
-            fasd fzf ghc ghc-static git github-cli git-lfs go httpie \
-            jdk-openjdk jq kotlin ldns llvm lsb-release lsof man-db maven \
-            minikube moreutils neofetch nodejs npm openmpi openssh pandoc \
-            plantuml python python-pip python-pipenv python-rope \
+            cabal-install clang cloc diff-so-fancy dlang-dmd dotnet-sdk \
+            eksctl exa fasd fzf ghc ghc-static git github-cli git-lfs go \
+            httpie jdk-openjdk jq kotlin ldns llvm lsb-release lsof man-db \
+            maven minikube moreutils neofetch nodejs npm openmpi openssh \
+            pandoc plantuml python python-pip python-pipenv python-rope \
             python-pylint pygmentize pyenv ripgrep ruby ruby-irb rustup shfmt \
             stack terraform tmux unzip vifm vim watchman wget xdg-utils zip \
             zsh zsh-completions
@@ -39,9 +39,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S azure-cli bat-extras-git direnv eksctl-bin git-delta-bin \
-            go-jira-bin google-cloud-sdk hadolint-bin kompose-bin mosh-git \
-            neovim-nightly ngrok tmuxinator yadm yay
+        yay -S azure-cli bat-extras-git direnv git-delta-bin go-jira-bin \
+            google-cloud-sdk hadolint-bin kompose-bin mosh-git neovim-nightly \
+            ngrok tmuxinator yadm yay
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
