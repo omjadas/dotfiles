@@ -70,7 +70,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
     sudo npm install -g @google/clasp commitizen cz-conventional-changelog \
         eslint nodemon ts-node typescript
-    pip install --user togglCli
+    pip install --user j2cli togglCli
 # macOS specific config
 elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     if ! command -v brew >/dev/null 2>&1; then
