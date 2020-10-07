@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
+rust-components () {
+    rustup component add clippy rls rust-analysis rust-src rustfmt
+}
+
 rust () {
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     rustup default stable
-    rustup component add clippy rls rust-analysis rust-src rustfmt
+    rust-components
 }
 
 cd "$HOME"
@@ -27,7 +31,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             pyenv ripgrep ruby ruby-irb rustup shfmt stack terraform tmux \
             unzip vifm vim watchman wget xdg-utils zip zsh zsh-completions
         rustup default stable
-        rustup component add clippy rls rust-analysis rust-src rustfmt
+        rust-components
 
         if ! command -v yay >/dev/null 2>&1; then
             echo "Installing yay"
