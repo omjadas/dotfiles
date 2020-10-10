@@ -29,8 +29,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             moreutils neofetch nodejs npm openmpi openssh pandoc plantuml \
             python python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv rclone ripgrep ruby ruby-irb rustup sd shfmt \
-            stack terraform tmux unzip vifm vim watchman wget xdg-utils zip \
-            zsh zsh-completions
+            stack terraform tmux units unzip vifm vim watchman wget xdg-utils \
+            zip zsh zsh-completions
         rustup default stable
         rust-components
 
