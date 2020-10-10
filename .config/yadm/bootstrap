@@ -22,7 +22,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S ansible atool autopep8 aws-cli base-devel bat \
+        sudo pacman -S ansible atool autopep8 aws-cli base-devel bat bmon \
             cabal-install clang cloc dlang-dmd dotnet-sdk eksctl exa fasd fd \
             fzf ghc ghc-static git github-cli git-lfs go httpie iftop \
             jdk-openjdk jq kotlin ldns llvm lsb-release lshw lsof man-db \
