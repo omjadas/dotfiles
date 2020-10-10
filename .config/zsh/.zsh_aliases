@@ -19,6 +19,19 @@ update () {
     nvim -c "PlugUpdate | qa"
 }
 
+docker-exec-stub () {
+    local service=$1
+    local docker_root=$2
+    local cmd=$3
+    local local_root=$(git rev-parse --show-toplevel)
+    local working_dir=${PWD#"$local_root"}
+    working_dir="$docker_root$working_dir"
+
+    shift 3
+
+    docker-compose exec -w "$working_dir" "$service" "$cmd" $@
+}
+
 alias gi='git-ignore'
 
 alias l='exa'
