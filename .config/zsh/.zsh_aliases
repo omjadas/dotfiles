@@ -57,3 +57,5 @@ alias sudo='sudo '
 
 alias gomount='gocryptfs ~/Dropbox\ \(Lens10\ Pty\ Ltd\)/Omja\ Das\ Desktop/Files ~/Private'
 alias gounmount='umount ~/Private'
+
+unalias sd

@@ -28,9 +28,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             jq kotlin ldns llvm lsb-release lsof man-db maven minikube \
             moreutils neofetch nodejs npm openmpi openssh pandoc plantuml \
             python python-pip python-pipenv python-rope python-pylint \
-            pygmentize pyenv rclone ripgrep ruby ruby-irb rustup shfmt stack \
-            terraform tmux unzip vifm vim watchman wget xdg-utils zip zsh \
-            zsh-completions
+            pygmentize pyenv rclone ripgrep ruby ruby-irb rustup sd shfmt \
+            stack terraform tmux unzip vifm vim watchman wget xdg-utils zip \
+            zsh zsh-completions
         rustup default stable
         rust-components
 
