@@ -2,6 +2,7 @@
 
 rust-components () {
     rustup component add clippy rls rust-analysis rust-src rustfmt
+    cargo install cargo-edit
 }
 
 rust () {
