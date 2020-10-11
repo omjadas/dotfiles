@@ -25,13 +25,13 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         echo "Installing packages"
         sudo pacman -S ansible atool autopep8 aws-cli base-devel bat bmon \
             cabal-install clang cloc dlang-dmd dotnet-sdk eksctl exa fd fzf \
-            ghc ghc-static git github-cli git-lfs go hexyl httpie iftop \
-            jdk-openjdk jq kotlin ldns llvm lsb-release lshw lsof man-db \
-            maven minikube moreutils neofetch nodejs npm openmpi openssh \
-            pandoc plantuml python python-pip python-pipenv python-rope \
-            python-pylint pygmentize pyenv rclone ripgrep ruby ruby-irb \
-            rustup sd shfmt stack terraform tmux units unzip vifm vim \
-            watchman wget xdg-utils zip zsh zsh-completions
+            ghc ghc-static git github-cli git-lfs go hexyl httpie hyperfine \
+            iftop jdk-openjdk jq kotlin ldns llvm lsb-release lshw lsof \
+            man-db maven minikube moreutils neofetch nodejs npm openmpi \
+            openssh pandoc plantuml python python-pip python-pipenv \
+            python-rope python-pylint pygmentize pyenv rclone ripgrep ruby \
+            ruby-irb rustup sd shfmt stack terraform tmux units unzip vifm \
+            vim watchman wget xdg-utils zip zsh zsh-completions
         rustup default stable
         rust-components
 
