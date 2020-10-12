@@ -47,6 +47,28 @@ alias llat='lla --tree'
 alias less='cless'
 alias cat='bat'
 
+alias ghi='gh issue'
+alias ghic='gh issue create'
+alias ghil='gh issue list'
+alias ghis='gh issue status'
+alias ghiv='gh issue view'
+alias ghivw='gh issue view -w'
+
+alias ghp='gh pr'
+alias ghpc='gh pr create'
+alias ghpl='gh pr list'
+alias ghps='gh pr status'
+alias ghpco='gh pr checkout'
+alias ghpv='gh pr view'
+alias ghpvw='gh pr view -w'
+
+alias ghr='gh repo'
+alias ghrc='ah repo create'
+alias ghrcl='gh repo clone'
+alias ghrf='gh repo fork'
+alias ghrv='gh repo view'
+alias ghrvw='gh repo view -w'
+
 if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     alias gcc='/usr/local/bin/gcc-10'
     alias g++='/usr/local/bin/g++-10'
