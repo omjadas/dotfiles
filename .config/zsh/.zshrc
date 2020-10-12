@@ -12,20 +12,26 @@ antigen use oh-my-zsh
 
 antigen bundle ansible
 antigen bundle archlinux
+antigen bundle cargo
 antigen bundle colorize
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle git
 antigen bundle kubectl
 antigen bundle minikube
+antigen bundle mvn
 antigen bundle npm
 antigen bundle pip
 antigen bundle pipenv
 antigen bundle rails
+antigen bundle ruby
+antigen bundle rust
+antigen bundle rustup
 antigen bundle sudo
 antigen bundle tmux
 antigen bundle tmuxinator
 antigen bundle vscode
+antigen bundle zsh_reload
 
 antigen bundle akarzim/zsh-docker-aliases
 
