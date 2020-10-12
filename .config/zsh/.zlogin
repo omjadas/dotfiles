@@ -35,7 +35,7 @@ group_lazy_load() {
     done
 }
 
-group_lazy_load "$HOME/.rvm/scripts/rvm" rvm ruby gem bundle irb solargraph
+group_lazy_load "$HOME/.rvm/scripts/rvm" rvm ruby gem bundle irb rubocop solargraph
 
 unset -f group_lazy_load
 
