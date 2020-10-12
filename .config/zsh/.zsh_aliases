@@ -22,12 +22,13 @@ update () {
 docker-exec-stub () {
     local service=$1
     local docker_root=$2
-    local cmd=$3
+    local opts=$3
+    local cmd=$4
     local working_dir="$docker_root/$(git rev-parse --show-prefix)"
 
-    shift 3
+    shift 4
 
-    docker-compose exec -w "$working_dir" "$service" "$cmd" $@
+    eval "docker-compose exec -w \"$working_dir\" $opts \"$service\" \"$cmd\" $@"
 }
 
 alias gi='git-ignore'
