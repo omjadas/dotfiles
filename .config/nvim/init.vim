@@ -24,6 +24,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'nelstrom/vim-textobj-rubyblock'
 
+  Plug 'svermeulen/vim-subversive'
+
   Plug 'tpope/vim-commentary'
 
   Plug 'tpope/vim-repeat'
@@ -35,3 +37,12 @@ call plug#begin('$HOME/.config/nvim/plugged')
 call plug#end()
 
 let g:plug_threads=8
+
+" vim-subversive
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+nmap S <plug>(SubversiveSubstituteToEndOfLine)
+
+nmap <leader>s <plug>(SubversiveSubstituteRange)
+xmap <leader>s <plug>(SubversiveSubstituteRange)
+nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
