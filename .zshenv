@@ -19,6 +19,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     fi
 fi
 
+export GOOGLER_COLORS=bjdxxy
+
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 
