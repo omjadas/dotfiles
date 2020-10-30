@@ -47,7 +47,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         yay -S azure-cli bat-extras-git browsh-bin direnv dust-bin \
             git-delta-bin go-jira-bin googler google-cloud-sdk gotop-bin \
             hadolint-bin k6-bin kompose-bin mosh-git neovim-nightly ngrok \
-            procs-bin tmuxinator up-bin yadm yay zoxide-bin
+            procs-bin tmuxinator up-bin yadm yay yq2-bin zoxide-bin
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
@@ -57,7 +57,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             direnv fasd git haskell-platform httpie jq llvm lsb-release \
             moreutils mosh neofetch neovim nodejs npm pandoc plantuml pylint3 \
             python3-autopep8 python3 python3-pygments python3-rope ripgrep \
-            ruby tmux unzip vifm vim yq2-bin zip zsh
+            ruby tmux unzip vifm vim zip zsh
         rust
     elif command -v dnf >/dev/null 2>&1; then
         echo "Updating packages"
