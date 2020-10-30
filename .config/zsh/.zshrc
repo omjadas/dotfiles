@@ -78,6 +78,10 @@ if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init zsh --cmd j)"
 fi
 
+if command -v dt >/dev/null 2>&1; then
+    eval "$(dt completion --help)"
+fi
+
 if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     eval "$(dircolors ~/.dircolors/dircolors.ansi-dark)"
 else
