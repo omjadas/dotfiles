@@ -29,10 +29,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             fd fzf ghc ghc-static git github-cli git-lfs go hexyl httpie \
             hyperfine iftop jdk-openjdk jq kotlin ldns llvm lsb-release lshw \
             lsof man-db maven minikube moreutils neofetch nmap nodejs npm \
-            openmpi openssh pandoc plantuml python python-pip python-pipenv \
-            python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
-            rsync ruby ruby-irb rustup sd shfmt stack terraform tmux units \
-            unzip vifm vim watchman wget xdg-utils zip zsh zsh-completions
+            openmpi openssh p7zip pandoc plantuml python python-pip \
+            python-pipenv python-rope python-pylint pygmentize pyenv rclone \
+            ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack \
+            terraform tmux units unzip vifm vim watchman wget xdg-utils zip \
+            zsh zsh-completions
         rustup default stable
         rust-components
 
@@ -56,9 +57,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         echo "Installing packages"
         sudo apt install atool bat build-essential clang cloc default-jdk \
             direnv fasd git haskell-platform httpie jq llvm lsb-release \
-            moreutils mosh neofetch neovim nodejs npm pandoc plantuml pylint3 \
-            python3-autopep8 python3 python3-pygments python3-rope ripgrep \
-            rmlint rsync ruby tmux unzip vifm vim zip zsh
+            moreutils mosh neofetch neovim nodejs npm p7zip-full pandoc \
+            plantuml pylint3 python3-autopep8 python3 python3-pygments \
+            python3-rope ripgrep rmlint rsync ruby tmux unzip vifm vim zip zsh
         rust
 
         ln -s /usr/bin/batcat "$HOME/.local/bin/bat"
