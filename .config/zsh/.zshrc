@@ -82,9 +82,9 @@ if command -v dt >/dev/null 2>&1; then
     eval "$(dt completion --help)"
 fi
 
-if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
+if command -v dircolors >/dev/null 2>&1; then
     eval "$(dircolors ~/.dircolors/dircolors.ansi-dark)"
-else
+elif command -v gdircolors >/dev/null 2>&1; then
     eval "$(gdircolors ~/.dircolors/dircolors.ansi-dark)"
 fi
 
