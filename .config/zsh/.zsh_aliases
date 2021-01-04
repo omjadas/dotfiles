@@ -73,6 +73,10 @@ alias npmi='npm install'
 alias npmci='npm ci'
 alias npmb='npm run build'
 
+if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
+    alias open='xdg-open'
+fi
+
 if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     alias gcc='/usr/local/bin/gcc-10'
     alias g++='/usr/local/bin/g++-10'
