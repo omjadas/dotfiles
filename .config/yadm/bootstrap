@@ -32,7 +32,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             openmpi openssh p7zip pandoc plantuml python python-pip \
             python-pipenv python-rope python-pylint pygmentize pyenv rclone \
             ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack \
-            terraform tmux units unzip vifm vim watchman wget xdg-utils zip \
+            terraform tmux units unzip vifm vim wget xdg-utils zip \
             zsh zsh-completions
         rustup default stable
         rust-components
@@ -48,8 +48,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         yay -S azure-cli bat-extras-git browsh-bin direnv dust-bin \
             git-delta-bin go-jira-bin googler google-cloud-sdk gotop-bin \
-            hadolint-bin k6-bin kompose-bin mosh-git neovim-nightly ngrok \
-            procs-bin tmuxinator up-bin yadm yay yq2-bin zoxide-bin
+            hadolint-bin k6-bin kompose-bin mosh-git neovim-nightly-bin ngrok \
+            procs-bin tmuxinator up-bin watchman yadm yay yq2-bin zoxide-bin
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
@@ -71,7 +71,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
     # WSL specific config
     if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
-        ln -s /mnt/c/Users/Omja\ Das/.ssh "$HOME"
+        ln -s /mnt/c/Users/omjadas/.ssh "$HOME"
         sudo npm install -g wsl-open
     fi
 

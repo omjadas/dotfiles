@@ -15,7 +15,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     # Add wsl-open as browser for WSL
     if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
         export BROWSER=wsl-open
-        export WIN_HOME='/mnt/c/Users/Omja Das'
+        export WIN_HOME='/mnt/c/Users/omjadas'
     fi
 fi
 
