@@ -26,7 +26,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         echo "Installing packages"
         sudo pacman -S ansible atool autopep8 aws-cli base-devel bat bmon \
             cabal-install clang cloc dlang-dmd dos2unix dotnet-sdk eksctl exa \
-            fd fzf ghc ghc-static git github-cli git-lfs go hexyl httpie \
+            fd fzf ghc ghc-static git github-cli git-lfs go helm hexyl httpie \
             hyperfine iftop inetutils jdk-openjdk jq kotlin ldns llvm \
             lsb-release lshw lsof man-db maven minikube moreutils neofetch \
             nmap nodejs npm openmpi openssh p7zip pandoc plantuml python \
