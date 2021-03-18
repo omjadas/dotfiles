@@ -82,6 +82,11 @@ if command -v dt >/dev/null 2>&1; then
     eval "$(dt completion --help)"
 fi
 
+if command -v brew >/dev/null 2>&1; then
+    gcloud_prefix="$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+    [[ -f "$gcloud_prefix/path.zsh.inc" ]] && source "$gcloud_prefix/path.zsh.inc"
+fi
+
 if command -v dircolors >/dev/null 2>&1; then
     eval "$(dircolors ~/.dircolors/dircolors.ansi-dark)"
 elif command -v gdircolors >/dev/null 2>&1; then
