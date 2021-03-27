@@ -32,8 +32,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             nmap nodejs npm openmpi openssh p7zip pandoc plantuml python \
             python-pip python-pipenv python-rope python-pylint pygmentize \
             pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt \
-            stack terraform tmux units unzip vifm vim wget xdg-utils zip \
-            zsh zsh-completions
+            stack terraform tmux units unzip vifm vim wget xdg-utils zip zsh \
+            zsh-completions
         rustup default stable
         rust-components
 
