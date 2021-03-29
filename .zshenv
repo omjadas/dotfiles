@@ -41,6 +41,11 @@ export ZSH_TMUX_AUTOCONNECT=false
 # Add ~/.cargo/bin to path
 [[ -d "$HOME/.cargo/bin" ]] && export PATH="$PATH:$HOME/.cargo/bin"
 
+# Add krew binaries to path
+if [[ -d "${KREW_ROOT:-$HOME/.krew}/bin" ]]; then
+    export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+fi
+
 # Add Android platform-tools to path
 if [[ -d "$HOME/Library/Android/sdk/platform-tools" ]]; then 
     export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
