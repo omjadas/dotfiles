@@ -48,7 +48,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         yay -S azure-cli bat-extras-git browsh-bin direnv dust-bin \
             git-delta-bin go-jira-bin googler google-cloud-sdk gotop-bin \
-            hadolint-bin k6-bin kompose-bin kubeval-bin mosh-git \
+            hadolint-bin k6-bin kompose-bin kubeval-bin krew-bin mosh-git \
             neovim-nightly-bin ngrok procs-bin tmuxinator up-bin watchman \
             yadm yay yq2-bin zoxide-bin
     elif command -v apt >/dev/null 2>&1; then
