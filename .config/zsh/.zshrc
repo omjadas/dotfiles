@@ -17,6 +17,7 @@ antigen bundle colorize
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle git
+antigen bundle helm
 antigen bundle kubectl
 antigen bundle minikube
 antigen bundle mvn
