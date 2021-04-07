@@ -26,14 +26,14 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         echo "Installing packages"
         sudo pacman -S ansible atool autopep8 aws-cli base-devel bat bmon \
             cabal-install clang cloc dlang-dmd dos2unix dotnet-sdk eksctl exa \
-            fd fzf ghc ghc-static git github-cli git-lfs go helm hexyl httpie \
-            hyperfine iftop inetutils jdk-openjdk jq kotlin kubectl kubectx \
-            ldns llvm lsb-release lshw lsof man-db maven minikube moreutils \
-            neofetch nmap nodejs npm openmpi openssh p7zip pandoc plantuml \
-            python python-pip python-pipenv python-rope python-pylint \
-            pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
-            sd shfmt stack terraform tmux units unzip vifm vim wget xdg-utils \
-            zip zsh zsh-completions
+            fd fzf ghc ghc-static git github-cli git-lfs go helm helmfile \
+            hexyl httpie hyperfine iftop inetutils jdk-openjdk jq kotlin \
+            kubectl kubectx ldns llvm lsb-release lshw lsof man-db maven \
+            minikube moreutils namcap neofetch nmap nodejs npm openmpi \
+            openssh p7zip pandoc plantuml python python-pip python-pipenv \
+            python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
+            rsync ruby ruby-irb rustup sd shfmt stack terraform tmux units \
+            unzip vifm vim wget xdg-utils zip zsh zsh-completions
         rustup default stable
         rust-components
 
@@ -46,11 +46,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S azure-cli bat-extras-git browsh-bin direnv dust-bin \
-            git-delta-bin go-jira-bin googler google-cloud-sdk gotop-bin \
-            hadolint-bin k6-bin kompose-bin krew-bin mosh-git \
-            neovim-nightly-bin ngrok procs-bin tmuxinator up-bin watchman \
-            yadm yay yq2-bin zoxide-bin
+        yay -S aws-iam-authenticator-bin azure-cli bat-extras-git browsh-bin \
+            direnv dust-bin git-delta-bin go-jira-bin googler \
+            google-cloud-sdk gotop-bin hadolint-bin k6-bin kompose-bin \
+            kubeval-bin krew-bin mosh-git neovim-nightly-bin ngrok procs-bin \
+            tmuxinator up-bin watchman yadm yay yq2-bin zoxide-bin
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
@@ -77,7 +77,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     fi
 
     sudo npm install -g @google/clasp commitizen cz-conventional-changelog \
-        eslint nodemon ts-node typescript
+        eslint heroku nodemon ts-node typescript
     pip install --user j2cli togglCli
 # macOS specific config
 elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
