@@ -89,4 +89,6 @@ alias sudo='sudo '
 alias gomount='gocryptfs ~/Dropbox\ \(DataTrue\)/Omja\ Das\ Desktop/Files ~/Private'
 alias gounmount='umount ~/Private'
 
+alias tfswitch='tfswitch --bin="${HOME}/.local/bin/terraform"'
+
 unalias sd
