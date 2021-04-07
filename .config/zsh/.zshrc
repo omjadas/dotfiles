@@ -12,6 +12,7 @@ antigen use oh-my-zsh
 
 antigen bundle ansible
 antigen bundle archlinux
+antigen bundle aws
 antigen bundle cargo
 antigen bundle colorize
 antigen bundle docker
