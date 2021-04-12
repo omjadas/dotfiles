@@ -24,7 +24,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S ansible atool autopep8 aws-cli base-devel bat bmon \
+        sudo pacman -S ansible atool autopep8 base-devel bat bmon \
             cabal-install clang cloc dlang-dmd dos2unix dotnet-sdk eksctl exa \
             fd fzf ghc ghc-static git github-cli git-lfs go helm helmfile \
             hexyl httpie hyperfine iftop inetutils jdk-openjdk jq kotlin \
@@ -46,11 +46,12 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S aws-iam-authenticator-bin azure-cli bat-extras-git browsh-bin \
-            direnv dust-bin git-delta-bin go-jira-bin googler \
-            google-cloud-sdk gotop-bin hadolint-bin k6-bin kompose-bin \
-            kubeval-bin krew-bin mosh-git neovim-nightly-bin ngrok procs-bin \
-            tmuxinator up-bin watchman yadm yay yq2-bin zoxide-bin
+        yay -S aws-cli-v2-bin aws-iam-authenticator-bin azure-cli \
+            bat-extras-git browsh-bin direnv dust-bin git-delta-bin \
+            go-jira-bin googler google-cloud-sdk gotop-bin hadolint-bin \
+            k6-bin kompose-bin kubeval-bin krew-bin mosh-git \
+            neovim-nightly-bin ngrok procs-bin tmuxinator up-bin watchman \
+            yadm yay yq2-bin zoxide-bin
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
