@@ -24,7 +24,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S ansible atool autopep8 base-devel bat bmon \
+        sudo pacman -S ansible atool aurpublish autopep8 base-devel bat bmon \
             cabal-install clang cloc dlang-dmd dos2unix dotnet-sdk eksctl exa \
             fd fzf ghc ghc-static git github-cli git-lfs go helm helmfile \
             hexyl httpie hyperfine iftop inetutils jdk-openjdk jq kotlin \
