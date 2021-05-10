@@ -30,10 +30,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             hexyl httpie hyperfine iftop inetutils jdk-openjdk jq kotlin \
             kubectl kubectx ldns llvm lsb-release lshw lsof man-db maven \
             minikube moreutils namcap neofetch nmap nodejs npm openmpi \
-            openssh p7zip pandoc plantuml python python-pip python-pipenv \
-            python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
-            rsync ruby ruby-irb rustup sd shfmt stack terraform tmux units \
-            unzip vifm vim wget xdg-utils zip zsh zsh-completions
+            openssh p7zip pandoc plantuml procs python python-pip \
+            python-pipenv python-rope python-pylint pygmentize pyenv rclone \
+            ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack \
+            terraform tmux units unzip vifm vim wget xdg-utils zip zsh \
+            zsh-completions
         rustup default stable
         rust-components
 
@@ -51,8 +52,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             direnv dust-bin git-delta-bin go-jira-bin googler \
             google-cloud-sdk gotop-bin hadolint-bin k6-bin kompose-bin \
             kube-score-bin kubeval-bin krew-bin mosh-git neovim-nightly-bin \
-            ngrok procs-bin tmuxinator up-bin watchman yadm yay yq2-bin \
-            zoxide-bin
+            ngrok tmuxinator up-bin watchman yadm yay yq2-bin zoxide-bin
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
