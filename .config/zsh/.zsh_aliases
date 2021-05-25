@@ -78,8 +78,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 fi
 
 if [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
-    alias gcc='/usr/local/bin/gcc-10'
-    alias g++='/usr/local/bin/g++-10'
+    alias gcc='/usr/local/bin/gcc-11'
+    alias g++='/usr/local/bin/g++-11'
 fi
 
 alias vi='vim'
@@ -91,4 +91,4 @@ alias gounmount='umount ~/Private'
 
 alias tfswitch='tfswitch --bin="${HOME}/.local/bin/terraform"'
 
-unalias sd
+unalias sd || true
