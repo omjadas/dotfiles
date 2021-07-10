@@ -34,7 +34,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             python-pipenv python-rope python-pylint pygmentize pyenv rclone \
             ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack \
             terraform tmux units unzip vifm vim wireshark-qt wget xdg-utils \
-            zip zsh zsh-completions
+            xonsh zip zsh zsh-completions
         rustup default stable
         rust-components
 
