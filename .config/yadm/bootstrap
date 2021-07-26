@@ -30,11 +30,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             httpie hyperfine iftop inetutils jdk-openjdk jq kotlin kubectl \
             kubectx ldns llvm lsb-release lshw lsof man-db maven minikube \
             moreutils namcap neofetch nmap nodejs npm openmpi openssh p7zip \
-            pandoc plantuml procs python python-pip python-pipenv python-rope \
-            python-pylint pygmentize pyenv rclone ripgrep rmlint rsync ruby \
-            ruby-irb rustup sd shfmt stack starship termshark terraform tmux \
-            tokei units unzip vifm vim wireshark-qt wget xdg-utils xonsh zip \
-            zsh zsh-completions
+            pacman-contrib pandoc plantuml procs python python-pip \
+            python-pipenv python-rope python-pylint pygmentize pyenv rclone \
+            ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack starship \
+            termshark terraform tmux tokei units unzip vifm vim wireshark-qt \
+            wget xdg-utils xonsh zip zsh zsh-completions
         rustup default stable
         rust-components
 
