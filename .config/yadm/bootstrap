@@ -25,16 +25,16 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo pacman -S ansible atool aurpublish autopep8 base-devel bat bmon \
-            cabal-install clang cloc dlang-dmd dos2unix dotnet-sdk eksctl exa \
-            fd fzf ghc ghc-static git github-cli git-lfs go helm helmfile \
-            hexyl httpie hyperfine iftop inetutils jdk-openjdk jq kotlin \
-            kubectl kubectx ldns llvm lsb-release lshw lsof man-db maven \
-            minikube moreutils namcap neofetch nmap nodejs npm openmpi \
-            openssh p7zip pandoc plantuml procs python python-pip \
-            python-pipenv python-rope python-pylint pygmentize pyenv rclone \
-            ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack \
-            terraform tmux units unzip vifm vim wireshark-qt wget xdg-utils \
-            xonsh zip zsh zsh-completions
+            cabal-install clang dlang-dmd dos2unix dotnet-sdk eksctl exa fd \
+            fzf ghc ghc-static git github-cli git-lfs go helm helmfile hexyl \
+            httpie hyperfine iftop inetutils jdk-openjdk jq kotlin kubectl \
+            kubectx ldns llvm lsb-release lshw lsof man-db maven minikube \
+            moreutils namcap neofetch nmap nodejs npm openmpi openssh p7zip \
+            pandoc plantuml procs python python-pip python-pipenv python-rope \
+            python-pylint pygmentize pyenv rclone ripgrep rmlint rsync ruby \
+            ruby-irb rustup sd shfmt stack starship termshark terraform tmux \
+            tokei units unzip vifm vim wireshark-qt wget xdg-utils xonsh zip \
+            zsh zsh-completions
         rustup default stable
         rust-components
 
@@ -50,19 +50,20 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         yay -S amazon-ec2-instance-selector-bin aws-cli-v2-bin \
             aws-iam-authenticator-bin azure-cli bat-extras-git browsh-bin \
             direnv dust-bin git-delta-bin go-jira-bin googler \
-            google-cloud-sdk gotop-bin hadolint-bin k6-bin kompose-bin \
+            google-cloud-sdk gotop-bin grex hadolint-bin k6-bin kompose-bin \
             kube-score-bin kubeval-bin krew-bin mosh-git neovim-nightly-bin \
-            ngrok tmuxinator up-bin watchman yadm yay yq2-bin zoxide-bin
+            ngrok rustscan tmuxinator up-bin watchman yadm yay yq2-bin \
+            zoxide-bin
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
 
         echo "Installing packages"
-        sudo apt install atool bat build-essential clang cloc default-jdk \
-            direnv fasd git haskell-platform httpie jq llvm lsb-release \
-            moreutils mosh neofetch neovim nodejs npm p7zip-full pandoc \
-            plantuml pylint3 python3-autopep8 python3 python3-pygments \
-            python3-rope ripgrep rmlint rsync ruby tmux unzip vifm vim zip zsh
+        sudo apt install atool bat build-essential clang default-jdk direnv \
+            fasd git haskell-platform httpie jq llvm lsb-release moreutils \
+            mosh neofetch neovim nodejs npm p7zip-full pandoc plantuml \
+            pylint3 python3-autopep8 python3 python3-pygments python3-rope \
+            ripgrep rmlint rsync ruby tmux unzip vifm vim xonsh zip zsh
         rust
 
         ln -s /usr/bin/batcat "$HOME/.local/bin/bat"
