@@ -82,7 +82,7 @@ if command -v zoxide >/dev/null 2>&1; then
 fi
 
 if command -v dt >/dev/null 2>&1; then
-    eval "$(dt completion --help)"
+    eval "$(dt completion)"
 fi
 
 if command -v brew >/dev/null 2>&1; then
