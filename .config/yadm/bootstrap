@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
 rust-components () {
+    rustup toolchain install stable
+    rustup toolchain install nightly
+    rustup default stable
     rustup component add clippy rls rust-analysis rust-src rustfmt
-    cargo install cargo-edit
-    cargo install cargo-update
     cargo install cargo-audit cargo-edit cargo-make cargo-outdated \
         cargo-update cargo-watch
 }
 
 rust () {
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    rustup default stable
     rust-components
 }
 
