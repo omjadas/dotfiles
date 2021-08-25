@@ -36,8 +36,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             pacman-contrib pandoc plantuml procs python python-pip \
             python-pipenv python-rope python-pylint pygmentize pyenv rclone \
             ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack starship \
-            termshark terraform tmux tokei units unzip vifm vim wireshark-qt \
-            wget xdg-utils xonsh zip zsh zsh-completions
+            tcpdump termshark terraform tmux tokei units unzip vifm vim \
+            wireshark-qt wget xdg-utils xonsh zip zsh zsh-completions
         rustup default stable
         rust-components
 
