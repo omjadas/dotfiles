@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 rust-components () {
+    rustup set profile complete
     rustup toolchain install stable
     rustup toolchain install nightly
     rustup default stable
     rustup component add clippy rls rust-analysis rust-src rustfmt
     cargo install cargo-audit cargo-edit cargo-make cargo-outdated \
-        cargo-update cargo-watch
+        cargo-udeps cargo-update cargo-watch
 }
 
 rust () {
