@@ -11,6 +11,7 @@ update () {
         brew update && brew upgrade
     fi
     rustup update
+    cargo install-update -a
     antigen update
     nvm upgrade
     git-ignore -u
@@ -92,3 +93,8 @@ alias gounmount='umount ~/Private'
 alias tfswitch='tfswitch --bin="${HOME}/.local/bin/terraform"'
 
 unalias sd || true
+
+if [[ -v XONSH ]]; then
+    unalias glod
+    unalias glol
+fi
