@@ -33,9 +33,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             fd fzf ghc ghc-static git git-delta github-cli git-lfs go helm \
             helmfile hexyl httpie hyperfine iftop inetutils jdk-openjdk jq \
             kotlin kubectl kubectx ldns llvm lsb-release lshw lsof man-db \
-            maven minikube moreutils mysql namcap neofetch nmap nodejs npm \
-            openmpi openssh p7zip pacman-contrib pandoc plantuml postgresql \
-            procs python python-pip python-pipenv python-rope python-pylint \
+            maven minikube moreutils namcap neofetch nmap nodejs npm openmpi \
+            openssh p7zip pacman-contrib pandoc plantuml postgresql procs \
+            python python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
             sd shfmt sqlite stack starship tcpdump termshark terraform tmux \
             tokei units unzip vifm vim wabt wireshark-qt wget xdg-utils xonsh \
@@ -58,6 +58,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             hadolint-bin k6-bin kompose-bin kube-score-bin kubeval-bin \
             krew-bin mosh-git neovim-nightly-bin ngrok rustscan tmuxinator \
             up-bin watchman yadm yay yq2-bin
+        yay -Sa mysql-clients mysql
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
