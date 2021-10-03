@@ -7,7 +7,7 @@ rust-components () {
     rustup default stable
     rustup component add clippy rls rust-analysis rust-src rustfmt
     cargo install cargo-audit cargo-edit cargo-make cargo-outdated \
-        cargo-udeps cargo-update cargo-watch
+        cargo-udeps cargo-update cargo-watch diesel_cli
 }
 
 rust () {
@@ -33,13 +33,13 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             fd fzf ghc ghc-static git git-delta github-cli git-lfs go helm \
             helmfile hexyl httpie hyperfine iftop inetutils jdk-openjdk jq \
             kotlin kubectl kubectx ldns llvm lsb-release lshw lsof man-db \
-            maven minikube moreutils namcap neofetch nmap nodejs npm openmpi \
-            openssh p7zip pacman-contrib pandoc plantuml procs python \
-            python-pip python-pipenv python-rope python-pylint pygmentize \
-            pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt \
-            stack starship tcpdump termshark terraform tmux tokei units unzip \
-            vifm vim wabt wireshark-qt wget xdg-utils xonsh youtube-dl zip \
-            zoxide zsh zsh-completions
+            maven minikube moreutils mysql namcap neofetch nmap nodejs npm \
+            openmpi openssh p7zip pacman-contrib pandoc plantuml postgresql \
+            procs python python-pip python-pipenv python-rope python-pylint \
+            pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
+            sd shfmt sqlite stack starship tcpdump termshark terraform tmux \
+            tokei units unzip vifm vim wabt wireshark-qt wget xdg-utils xonsh \
+            youtube-dl zip zoxide zsh zsh-completions
         rustup default stable
         rust-components
 
