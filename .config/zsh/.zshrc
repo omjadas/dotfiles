@@ -34,7 +34,6 @@ antigen bundle terraform
 antigen bundle tmux
 antigen bundle tmuxinator
 antigen bundle vscode
-antigen bundle zsh_reload
 
 antigen bundle akarzim/zsh-docker-aliases
 
