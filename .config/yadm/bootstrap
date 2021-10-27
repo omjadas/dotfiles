@@ -34,11 +34,11 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo pacman -S ansible atool aurpublish autopep8 base-devel bat bmon \
-            cabal-install clang dlang-dmd dos2unix dotnet-sdk dust eksctl exa \
-            fd fzf ghc ghc-static git git-delta github-cli git-lfs go helm \
-            helmfile hexyl httpie hyperfine iftop inetutils jdk-openjdk jq \
-            kotlin kubectl kubectx ldns llvm lsb-release lshw lsof man-db \
-            maven minikube moreutils namcap neofetch nmap nodejs npm openmpi \
+            cabal-install clang dlang-dmd dog dos2unix dotnet-sdk dust eksctl \
+            exa fd fzf ghc ghc-static git git-delta github-cli git-lfs go \
+            helm helmfile hexyl httpie hyperfine iftop inetutils jdk-openjdk \
+            jq kotlin kubectl kubectx llvm lsb-release lshw lsof man-db maven \
+            minikube moreutils namcap neofetch nmap nodejs npm openmpi \
             openssh p7zip pacman-contrib pandoc plantuml postgresql procs \
             python python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
