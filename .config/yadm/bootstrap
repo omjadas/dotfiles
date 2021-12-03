@@ -37,7 +37,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -S ansible atool aurpublish autopep8 base-devel bat bmon \
             cabal-install clang direnv dlang-dmd dog dos2unix dotnet-sdk dust \
             eksctl exa fd fzf ghc ghc-static git git-absorb git-delta \
-            github-cli git-lfs go helm helmfile hexyl httpie hyperfine iftop \
+            github-cli git-lfs go helm helmfile hexyl hyperfine iftop \
             inetutils jdk-openjdk jq kotlin kubectl kubectx llvm lsb-release \
             lshw lsof man-db maven minikube moreutils namcap neofetch nmap \
             nodejs npm openmpi openssh p7zip pacman-contrib pandoc plantuml \
@@ -45,7 +45,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             python-pylint pygmentize pyenv rclone ripgrep rmlint rsync ruby \
             ruby-irb rustup sd shfmt sqlite stack starship tcpdump termshark \
             terraform tmux tokei units unzip vifm vim wabt wireshark-qt wget \
-            xdg-utils xonsh youtube-dl zip zoxide zsh zsh-completions
+            xdg-utils xh xonsh youtube-dl zip zoxide zsh zsh-completions
         rustup default stable
         rust-components
 
