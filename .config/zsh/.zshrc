@@ -13,7 +13,6 @@ antigen use oh-my-zsh
 antigen bundle ansible
 antigen bundle archlinux
 antigen bundle aws
-antigen bundle cargo
 antigen bundle colorize
 antigen bundle docker
 antigen bundle docker-compose
@@ -28,7 +27,6 @@ antigen bundle pipenv
 antigen bundle rails
 antigen bundle ruby
 antigen bundle rust
-antigen bundle rustup
 antigen bundle sudo
 antigen bundle terraform
 antigen bundle tmux
