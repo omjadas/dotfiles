@@ -7,7 +7,7 @@ rust-components () {
     rustup default stable
     rustup component add clippy rls rust-analysis rust-src rustfmt
     cargo install cargo-cache cargo-edit cargo-expand cargo-make \
-        cargo-outdated cargo-udeps cargo-update cargo-watch diesel_cli
+        cargo-outdated cargo-udeps cargo-update cargo-watch diesel_cli when-cli
     cargo install cargo-audit --features=fix
 }
 
