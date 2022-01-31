@@ -62,7 +62,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             aws-iam-authenticator-bin azure-cli bat-extras-git browsh-bin \
             git-trim go-jira-bin googler google-cloud-sdk gotop-bin grex \
             grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
-            kubeval-bin krew-bin mosh-git neovim-nightly-bin ngrok rustscan \
+            kubeval-bin krew-bin mosh-git neovim-nightly-bin rustscan \
             tmuxinator up-bin watchman yadm yay yq2-bin
         yay -Sa mysql-clients mysql
         gh-extensions
