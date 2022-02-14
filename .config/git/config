@@ -16,8 +16,6 @@
 
 [delta]
     line-numbers = true
-    plus-color = "#012800"
-    minus-color = "#340001"
     syntax-theme = Solarized (dark)
 
 [interactive]
