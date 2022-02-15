@@ -61,11 +61,12 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         yay -S amazon-ec2-instance-selector-bin android-studio aws-cli-v2-bin \
             aws-iam-authenticator-bin azure-cli bat-extras-git browsh-bin \
-            git-trim go-jira-bin googler google-chrome google-chrome-beta \
-            google-chrome-dev google-cloud-sdk gotop-bin grex grpcurl-bin \
-            hadolint-bin k6-bin kompose-bin kube-score-bin kubeval-bin \
-            krew-bin mosh-git neovim-nightly-bin postman-bin rustscan \
-            tmuxinator up-bin visual-studio-code-bin watchman yadm yay yq2-bin
+            fnm-bin git-trim go-jira-bin googler google-chrome \
+            google-chrome-beta google-chrome-dev google-cloud-sdk gotop-bin \
+            grex grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
+            kubeval-bin krew-bin mosh-git neovim-nightly-bin postman-bin \
+            rustscan tmuxinator up-bin visual-studio-code-bin watchman yadm \
+            yay yq2-bin
         yay -Sa mysql-clients mysql
         gh-extensions
     elif command -v apt >/dev/null 2>&1; then

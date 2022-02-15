@@ -37,8 +37,6 @@ antigen bundle akarzim/zsh-docker-aliases
 
 antigen bundle laggardkernel/git-ignore
 
-antigen bundle lukechilds/zsh-nvm
-
 antigen bundle MichaelAquilina/zsh-you-should-use
 
 antigen bundle omjadas/yadm-zsh
@@ -80,6 +78,10 @@ fi
 
 if command -v dt >/dev/null 2>&1; then
     eval "$(dt completion)"
+fi
+
+if command -v fnm >/dev/null 2>&1; then
+    eval "$(fnm env --use-on-cd)"
 fi
 
 if command -v brew >/dev/null 2>&1; then
