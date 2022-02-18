@@ -8,7 +8,7 @@ rust-components () {
     rustup component add clippy rls rust-analysis rust-src rustfmt
     cargo install cargo-cache cargo-edit cargo-expand cargo-make \
         cargo-outdated cargo-udeps cargo-update cargo-watch cargo-workspaces \
-        diesel_cli when-cli
+        when-cli
     cargo install cargo-audit --features=fix
 }
 
@@ -36,18 +36,18 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo pacman -S ansible atool aurpublish autopep8 base-devel bat \
-            bat-extras bmon cabal-install clang direnv dlang-dmd dog dos2unix \
-            dotnet-sdk dust eksctl exa fd firefox fzf ghc ghc-static git \
-            git-absorb git-delta github-cli git-lfs go helm helmfile hexyl \
-            hyperfine iftop inetutils jdk-openjdk jq kotlin kubectl kubectx \
-            llvm lsb-release lshw lsof man-db maven minikube miniserve \
-            moreutils namcap neofetch nmap nodejs npm openmpi openssh p7zip \
-            pacman-contrib pandoc plantuml postgresql procs python python-pip \
-            python-pipenv python-rope python-pylint pygmentize pyenv rclone \
-            ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt sqlite stack \
-            starship tcpdump termshark terraform tmux tokei units unzip vifm \
-            vim wabt wireshark-qt wget xdg-utils xh xonsh youtube-dl zip \
-            zoxide zsh zsh-completions
+            bat-extras bmon cabal-install clang diesel-cli direnv dlang-dmd \
+            dog dos2unix dotnet-sdk dust eksctl exa fd firefox fzf ghc \
+            ghc-static git git-absorb git-delta github-cli git-lfs go helm \
+            helmfile hexyl hyperfine iftop inetutils jdk-openjdk jq kotlin \
+            kubectl kubectx llvm lsb-release lshw lsof man-db maven minikube \
+            miniserve moreutils namcap neofetch nmap nodejs npm openmpi \
+            openssh p7zip pacman-contrib pandoc plantuml procs python \
+            python-pip python-pipenv python-rope python-pylint pygmentize \
+            pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt \
+            stack \starship tcpdump termshark terraform tmux tokei units \
+            unzip vifm vim wabt wireshark-qt wget xdg-utils xh xonsh \
+            youtube-dl zip zoxide zsh zsh-completions
         rustup default stable
         rust-components
 
@@ -67,7 +67,6 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             hadolint-bin k6-bin kompose-bin kube-score-bin kubeval-bin \
             krew-bin mosh-git neovim-nightly-bin postman-bin rustscan \
             tmuxinator up-bin visual-studio-code-bin watchman yadm yay
-        yay -Sa mysql-clients mysql
         gh-extensions
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
