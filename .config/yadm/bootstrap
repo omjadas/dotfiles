@@ -35,18 +35,19 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu
 
         echo "Installing packages"
-        sudo pacman -S ansible atool aurpublish autopep8 base-devel bat bmon \
-            cabal-install clang direnv dlang-dmd dog dos2unix dotnet-sdk dust \
-            eksctl exa fd firefox fzf ghc ghc-static git git-absorb git-delta \
-            github-cli git-lfs go helm helmfile hexyl hyperfine iftop \
-            inetutils jdk-openjdk jq kotlin kubectl kubectx llvm lsb-release \
-            lshw lsof man-db maven minikube moreutils namcap neofetch nmap \
-            nodejs npm openmpi openssh p7zip pacman-contrib pandoc plantuml \
-            postgresql procs python python-pip python-pipenv python-rope \
-            python-pylint pygmentize pyenv rclone ripgrep rmlint rsync ruby \
-            ruby-irb rustup sd shfmt sqlite stack starship tcpdump termshark \
-            terraform tmux tokei units unzip vifm vim wabt wireshark-qt wget \
-            xdg-utils xh xonsh youtube-dl zip zoxide zsh zsh-completions
+        sudo pacman -S ansible atool aurpublish autopep8 base-devel bat \
+            bat-extras bmon cabal-install clang direnv dlang-dmd dog dos2unix \
+            dotnet-sdk dust eksctl exa fd firefox fzf ghc ghc-static git \
+            git-absorb git-delta github-cli git-lfs go helm helmfile hexyl \
+            hyperfine iftop inetutils jdk-openjdk jq kotlin kubectl kubectx \
+            llvm lsb-release lshw lsof man-db maven minikube moreutils namcap \
+            neofetch nmap nodejs npm openmpi openssh p7zip pacman-contrib \
+            pandoc plantuml postgresql procs python python-pip python-pipenv \
+            python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
+            rsync ruby ruby-irb rustup sd shfmt sqlite stack starship tcpdump \
+            termshark terraform tmux tokei units unzip vifm vim wabt \
+            wireshark-qt wget xdg-utils xh xonsh youtube-dl zip zoxide zsh \
+            zsh-completions
         rustup default stable
         rust-components
 
@@ -60,13 +61,12 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         fi
 
         yay -S amazon-ec2-instance-selector-bin android-studio aws-cli-v2-bin \
-            aws-iam-authenticator-bin azure-cli bat-extras-git browsh-bin \
-            fnm-bin git-trim go-jira-bin googler google-chrome \
-            google-chrome-beta google-chrome-dev google-cloud-sdk gotop-bin \
-            grex grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
-            kubeval-bin krew-bin mosh-git neovim-nightly-bin postman-bin \
-            rustscan tmuxinator up-bin visual-studio-code-bin watchman yadm \
-            yay yq2-bin
+            aws-iam-authenticator-bin azure-cli browsh-bin fnm-bin git-trim \
+            go-jira-bin googler google-chrome google-chrome-beta \
+            google-chrome-dev google-cloud-sdk gotop-bin grex grpcurl-bin \
+            hadolint-bin k6-bin kompose-bin kube-score-bin kubeval-bin \
+            krew-bin mosh-git neovim-nightly-bin postman-bin rustscan \
+            tmuxinator up-bin visual-studio-code-bin watchman yadm yay
         yay -Sa mysql-clients mysql
         gh-extensions
     elif command -v apt >/dev/null 2>&1; then
