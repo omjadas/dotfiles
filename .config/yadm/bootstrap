@@ -40,14 +40,14 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             dotnet-sdk dust eksctl exa fd firefox fzf ghc ghc-static git \
             git-absorb git-delta github-cli git-lfs go helm helmfile hexyl \
             hyperfine iftop inetutils jdk-openjdk jq kotlin kubectl kubectx \
-            llvm lsb-release lshw lsof man-db maven minikube moreutils namcap \
-            neofetch nmap nodejs npm openmpi openssh p7zip pacman-contrib \
-            pandoc plantuml postgresql procs python python-pip python-pipenv \
-            python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
-            rsync ruby ruby-irb rustup sd shfmt sqlite stack starship tcpdump \
-            termshark terraform tmux tokei units unzip vifm vim wabt \
-            wireshark-qt wget xdg-utils xh xonsh youtube-dl zip zoxide zsh \
-            zsh-completions
+            llvm lsb-release lshw lsof man-db maven minikube miniserve \
+            moreutils namcap neofetch nmap nodejs npm openmpi openssh p7zip \
+            pacman-contrib pandoc plantuml postgresql procs python python-pip \
+            python-pipenv python-rope python-pylint pygmentize pyenv rclone \
+            ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt sqlite stack \
+            starship tcpdump termshark terraform tmux tokei units unzip vifm \
+            vim wabt wireshark-qt wget xdg-utils xh xonsh youtube-dl zip \
+            zoxide zsh zsh-completions
         rustup default stable
         rust-components
 
