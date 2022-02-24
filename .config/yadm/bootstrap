@@ -63,9 +63,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S amazon-ec2-instance-selector-bin android-studio atool \
-            aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
-            fnm-bin git-trim go-jira-bin googler google-chrome \
+        yay -S --noconfirm amazon-ec2-instance-selector-bin android-studio \
+            atool aws-cli-v2-bin aws-iam-authenticator-bin azure-cli \
+            browsh-bin fnm-bin git-trim go-jira-bin googler google-chrome \
             google-chrome-beta google-chrome-dev google-cloud-sdk gotop-bin \
             grex grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
             kubeval-bin krew-bin mosh-git neovim-nightly-bin postman-bin \
