@@ -25,6 +25,8 @@ gh-extensions () {
 }
 
 gh-auth () {
+    echo "Configuring gh"
+
     if [[ -z "$HEADLESS" ]]; then
         gh auth login
         gh-extensions
@@ -49,7 +51,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu --noconfirm
 
         echo "Installing packages"
-        sudo pacman -S --noconfirm ansible aurpublish autopep8 \
+        sudo pacman -S --needed --noconfirm ansible aurpublish autopep8 \
             base-devel bat bat-extras bmon cabal-install clang diesel-cli \
             direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl exa fd \
             firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
@@ -75,7 +77,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S --noconfirm amazon-ec2-instance-selector-bin atool \
+        yay -S --needed --noconfirm amazon-ec2-instance-selector-bin atool \
             aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
             fnm-bin git-trim go-jira-bin googler google-cloud-sdk gotop-bin \
             grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
@@ -83,7 +85,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             tmuxinator up-bin watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
-            yay -S --noconfirm android-studio google-chrome \
+            yay -S --needed --noconfirm android-studio google-chrome \
                 google-chrome-beta google-chrome-dev postman-bin \
                 visual-studio-code-bin
         fi
@@ -109,7 +111,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     fi
 
     # WSL specific config
-    if [[ "$(uname -r)" =~ (m|M)icrosoft ]]; then
+    if [[ "$(uname -r)" =~ (m|M)icrosoft && -d "/mnt/c/Users/omjadas/.ssh" ]]; then
+        rm -rf "$HOME/.ssh"
         ln -s /mnt/c/Users/omjadas/.ssh "$HOME"
         sudo npm install -g wsl-open
     fi
