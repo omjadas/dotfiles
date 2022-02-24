@@ -37,7 +37,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -Syu --noconfirm
 
         echo "Installing packages"
-        sudo pacman -S --noconfirm ansible atool aurpublish autopep8 \
+        sudo pacman -S --noconfirm ansible aurpublish autopep8 \
             base-devel bat bat-extras bmon cabal-install clang diesel-cli \
             direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl exa fd \
             firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
@@ -63,13 +63,13 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S amazon-ec2-instance-selector-bin android-studio aws-cli-v2-bin \
-            aws-iam-authenticator-bin azure-cli browsh-bin fnm-bin git-trim \
-            go-jira-bin googler google-chrome google-chrome-beta \
-            google-chrome-dev google-cloud-sdk gotop-bin grex grpcurl-bin \
-            hadolint-bin k6-bin kompose-bin kube-score-bin kubeval-bin \
-            krew-bin mosh-git neovim-nightly-bin postman-bin rustscan \
-            tmuxinator up-bin visual-studio-code-bin watchman yay
+        yay -S amazon-ec2-instance-selector-bin android-studio atool \
+            aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
+            fnm-bin git-trim go-jira-bin googler google-chrome \
+            google-chrome-beta google-chrome-dev google-cloud-sdk gotop-bin \
+            grex grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
+            kubeval-bin krew-bin mosh-git neovim-nightly-bin postman-bin \
+            rustscan tmuxinator up-bin visual-studio-code-bin watchman yay
 
         gh-extensions
     elif command -v apt >/dev/null 2>&1; then
@@ -114,6 +114,8 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
 
     gh-extensions
 fi
+
+chsh -s /usr/bin/zsh
 
 vim -c "PlugClean | PlugUpdate | qa"
 nvim -c "PlugClean | PlugUpdate | qa"
