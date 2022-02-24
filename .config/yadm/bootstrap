@@ -3,11 +3,9 @@
 set -e
 
 rust-components () {
-    rustup set profile complete
-    rustup toolchain install stable
-    rustup toolchain install nightly
     rustup default stable
-    rustup component add clippy rls rust-analysis rust-src rustfmt
+    rustup toolchain install nightly
+    rustup component add rls
     cargo install cargo-cache cargo-edit cargo-expand cargo-make \
         cargo-outdated cargo-udeps cargo-update cargo-watch cargo-workspaces \
         when-cli
@@ -64,7 +62,6 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl zip zoxide \
             zsh zsh-completions
 
-        rustup default stable
         rust-components
 
         if ! command -v yay >/dev/null 2>&1; then
@@ -90,6 +87,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         fi
 
         gh-auth
+        rustup toolchain uninstall $(rustup toolchain list | rg '^1\.' | sd '\n' ' ')
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
