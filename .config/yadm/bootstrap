@@ -135,7 +135,7 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     gh-auth
 fi
 
-chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh "$(whoami)"
 
 if [[ $- == *i* ]]; then
     vim -c "PlugClean | PlugUpdate | qa"
