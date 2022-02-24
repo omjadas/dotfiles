@@ -63,6 +63,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         rust-components
 
+        sudo sd "^PKGEXT='[^']+'$" "PKGEXT='.pkg.tar'" /etc/makepkg.conf
+        sudo sd "^SRCEXT='[^']+'$" "SRCEXT='.src.tar'" /etc/makepkg.conf
+
         if ! command -v yay >/dev/null 2>&1; then
             echo "Installing yay"
             git clone https://aur.archlinux.org/yay.git
