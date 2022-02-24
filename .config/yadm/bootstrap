@@ -20,8 +20,11 @@ rust () {
 }
 
 gh-extensions () {
-    gh extension install mislav/gh-branch
-    gh extension install hashue/gh-fuzzyclone
+    if [[ -n "$GITHUB_TOKEN" ]]; then
+        echo "$GITHUB_TOKEN" | gh auth login --with-token
+        gh extension install mislav/gh-branch
+        gh extension install hashue/gh-fuzzyclone
+    fi
 }
 
 cd "$HOME"
