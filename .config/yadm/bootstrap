@@ -56,14 +56,15 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl exa fd \
             firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
             git-lfs go grex helm helmfile hexyl hyperfine iftop inetutils \
-            jdk-openjdk jq kotlin kubectl kubectx llvm lsb-release lshw lsof \
-            man-db maven minikube miniserve mold moreutils namcap neofetch \
-            nmap nodejs npm openmpi openssh p7zip pacman-contrib pandoc \
-            plantuml procs python python-pip python-pipenv python-rope \
-            python-pylint pygmentize pyenv rclone ripgrep rmlint rsync ruby \
-            ruby-irb rustup sd shfmt stack starship tcpdump termshark \
-            terraform tmux tokei units unzip vifm vim wabt wireshark-qt wget \
-            xdg-utils xh xonsh yadm youtube-dl zip zoxide zsh zsh-completions
+            jdk-openjdk jq kompose kotlin kubectl kubectx llvm lsb-release \
+            lshw lsof man-db maven minikube miniserve mold moreutils namcap \
+            neofetch nmap nodejs npm openmpi openssh p7zip pacman-contrib \
+            pandoc plantuml procs python python-j2cli python-pip \
+            python-pipenv python-rope python-pylint pygmentize pyenv rclone \
+            ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt stack starship \
+            tcpdump termshark terraform tmux tokei units unzip vifm vim wabt \
+            wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl zip zoxide \
+            zsh zsh-completions
 
         rustup default stable
         rust-components
@@ -80,9 +81,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         yay -S --needed --noconfirm amazon-ec2-instance-selector-bin atool \
             aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
             fnm-bin git-trim go-jira-bin googler google-cloud-sdk gotop-bin \
-            grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
-            kubeval-bin krew-bin mosh-git neovim-nightly-bin rustscan \
-            tmuxinator up-bin watchman-bin yay
+            grpcurl-bin hadolint-bin k6-bin kube-score-bin kubeval-bin \
+            krew-bin mosh-git neovim-nightly-bin rustscan tmuxinator up-bin \
+            watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
             yay -S --needed --noconfirm android-studio google-chrome \
@@ -121,7 +122,6 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
     sudo npm install -g @google/clasp commitizen cz-conventional-changelog \
         eslint heroku nodemon ts-node typescript
-    pip install --user j2cli togglCli
 # macOS specific config
 elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     if ! command -v brew >/dev/null 2>&1; then
