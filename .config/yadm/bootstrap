@@ -20,10 +20,19 @@ rust () {
 }
 
 gh-extensions () {
+    gh extension install mislav/gh-branch
+    gh extension install hashue/gh-fuzzyclone
+}
+
+gh-auth () {
+    if [[ -z "$HEADLESS" ]]; then
+        gh auth login
+        gh-extensions
+    fi
+
     if [[ -n "$GITHUB_TOKEN" ]]; then
         echo "$GITHUB_TOKEN" | gh auth login --with-token
-        gh extension install mislav/gh-branch
-        gh extension install hashue/gh-fuzzyclone
+        gh-extensions
     fi
 }
 
@@ -44,7 +53,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             base-devel bat bat-extras bmon cabal-install clang diesel-cli \
             direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl exa fd \
             firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
-            git-lfs go helm helmfile hexyl hyperfine iftop inetutils \
+            git-lfs go grex helm helmfile hexyl hyperfine iftop inetutils \
             jdk-openjdk jq kotlin kubectl kubectx llvm lsb-release lshw lsof \
             man-db maven minikube miniserve mold moreutils namcap neofetch \
             nmap nodejs npm openmpi openssh p7zip pacman-contrib pandoc \
@@ -66,15 +75,20 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             rm -rf yay
         fi
 
-        yay -S --noconfirm amazon-ec2-instance-selector-bin android-studio \
-            atool aws-cli-v2-bin aws-iam-authenticator-bin azure-cli \
-            browsh-bin fnm-bin git-trim go-jira-bin googler google-chrome \
-            google-chrome-beta google-chrome-dev google-cloud-sdk gotop-bin \
-            grex grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
-            kubeval-bin krew-bin mosh-git neovim-nightly-bin postman-bin \
-            rustscan tmuxinator up-bin visual-studio-code-bin watchman yay
+        yay -S --noconfirm amazon-ec2-instance-selector-bin atool \
+            aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
+            fnm-bin git-trim go-jira-bin googler google-cloud-sdk gotop-bin \
+            grpcurl-bin hadolint-bin k6-bin kompose-bin kube-score-bin \
+            kubeval-bin krew-bin mosh-git neovim-nightly-bin rustscan \
+            tmuxinator up-bin watchman-bin yay
 
-        gh-extensions
+        if [[ -z "$HEADLESS" ]]; then
+            yay -S --noconfirm android-studio google-chrome \
+                google-chrome-beta google-chrome-dev postman-bin \
+                visual-studio-code-bin
+        fi
+
+        gh-auth
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
@@ -100,6 +114,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo npm install -g wsl-open
     fi
 
+    echo "Installing global NPM packages"
+
     sudo npm install -g @google/clasp commitizen cz-conventional-changelog \
         eslint heroku nodemon ts-node typescript
     pip install --user j2cli togglCli
@@ -115,7 +131,7 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
         brew bundle --global
     fi
 
-    gh-extensions
+    gh-auth
 fi
 
 chsh -s /usr/bin/zsh
