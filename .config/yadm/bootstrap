@@ -58,7 +58,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             echo "Installing yay"
             git clone https://aur.archlinux.org/yay.git
             cd yay
-            makepkg -si --no-confirm
+            makepkg -si --noconfirm
             cd ..
             rm -rf yay
         fi
