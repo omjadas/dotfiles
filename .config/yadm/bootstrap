@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 rust-components () {
     rustup set profile complete
     rustup toolchain install stable
@@ -32,22 +34,23 @@ SYSTEM_TYPE=$(uname -s)
 if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
     if command -v pacman >/dev/null 2>&1; then
         echo "Updating packages"
-        sudo pacman -Syu
+        sudo pacman -Syu --noconfirm
 
         echo "Installing packages"
-        sudo pacman -S ansible atool aurpublish autopep8 base-devel bat \
-            bat-extras bmon cabal-install clang diesel-cli direnv dlang-dmd \
-            dog dos2unix dotnet-sdk dust eksctl exa fd firefox fzf ghc \
-            ghc-static git git-absorb git-delta github-cli git-lfs go helm \
-            helmfile hexyl hyperfine iftop inetutils jdk-openjdk jq kotlin \
-            kubectl kubectx llvm lsb-release lshw lsof man-db maven minikube \
-            miniserve mold moreutils namcap neofetch nmap nodejs npm openmpi \
-            openssh p7zip pacman-contrib pandoc plantuml procs python \
-            python-pip python-pipenv python-rope python-pylint pygmentize \
-            pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt \
-            stack \starship tcpdump termshark terraform tmux tokei units \
-            unzip vifm vim wabt wireshark-qt wget xdg-utils xh xonsh \
-            youtube-dl zip zoxide zsh zsh-completions
+        sudo pacman -S --noconfirm ansible atool aurpublish autopep8 \
+            base-devel bat bat-extras bmon cabal-install clang diesel-cli \
+            direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl exa fd \
+            firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
+            git-lfs go helm helmfile hexyl hyperfine iftop inetutils \
+            jdk-openjdk jq kotlin kubectl kubectx llvm lsb-release lshw lsof \
+            man-db maven minikube miniserve mold moreutils namcap neofetch \
+            nmap nodejs npm openmpi openssh p7zip pacman-contrib pandoc \
+            plantuml procs python python-pip python-pipenv python-rope \
+            python-pylint pygmentize pyenv rclone ripgrep rmlint rsync ruby \
+            ruby-irb rustup sd shfmt stack starship tcpdump termshark \
+            terraform tmux tokei units unzip vifm vim wabt wireshark-qt wget \
+            xdg-utils xh xonsh yadm youtube-dl zip zoxide zsh zsh-completions
+
         rustup default stable
         rust-components
 
@@ -55,7 +58,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             echo "Installing yay"
             git clone https://aur.archlinux.org/yay.git
             cd yay
-            makepkg -si
+            makepkg -si --no-confirm
             cd ..
             rm -rf yay
         fi
@@ -66,7 +69,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             google-chrome-dev google-cloud-sdk gotop-bin grex grpcurl-bin \
             hadolint-bin k6-bin kompose-bin kube-score-bin kubeval-bin \
             krew-bin mosh-git neovim-nightly-bin postman-bin rustscan \
-            tmuxinator up-bin visual-studio-code-bin watchman yadm yay
+            tmuxinator up-bin visual-studio-code-bin watchman yay
+
         gh-extensions
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
