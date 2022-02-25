@@ -89,7 +89,12 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         fi
 
         gh-auth
-        rustup toolchain uninstall $(rustup toolchain list | rg '^1\.' | sd '\n' ' ')
+
+        TOOLCHAINS=$(rustup toolchain list | rg '^1\.' | sd '\n' ' ')
+
+        if [[ -n "$TOOLCHAINS" ]]; then
+            rustup toolchain uninstall $TOOLCHAINS
+        fi
     elif command -v apt >/dev/null 2>&1; then
         echo "Updating packages"
         sudo apt update && sudo apt dist-upgrade
