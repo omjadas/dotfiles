@@ -84,6 +84,10 @@ if command -v fnm >/dev/null 2>&1; then
     eval "$(fnm env --use-on-cd)"
 fi
 
+if command -v frum >/dev/null 2>&1; then
+    eval "$(frum init)"
+fi
+
 if command -v brew >/dev/null 2>&1; then
     gcloud_prefix="$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
     [[ -f "$gcloud_prefix/path.zsh.inc" ]] && source "$gcloud_prefix/path.zsh.inc"
