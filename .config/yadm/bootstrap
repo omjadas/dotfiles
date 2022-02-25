@@ -58,8 +58,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
             rsync ruby ruby-irb rustup sd shfmt stack starship tcpdump \
             termshark terraform tmux tokei units unzip vifm vim wabt \
-            wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl zip zoxide \
-            zsh zsh-completions
+            wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl zellij zip \
+            zoxide zsh zsh-completions
 
         rust-components
 
