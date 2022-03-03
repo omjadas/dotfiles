@@ -29,9 +29,6 @@ export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history)
 
 export ZSH_COLORIZE_STYLE=solarized-dark
 
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_AUTOCONNECT=false
-
 # Source secrets
 [[ -f "$ZDOTDIR/.zsh_secrets" ]] && source "$ZDOTDIR/.zsh_secrets"
 

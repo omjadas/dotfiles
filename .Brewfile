@@ -118,7 +118,6 @@ brew "wireshark", link: false
 brew "termshark"
 brew "terraforming"
 brew "tflint"
-brew "tmux"
 brew "tokei"
 brew "tree"
 brew "up"

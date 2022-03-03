@@ -57,9 +57,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             plantuml procs python python-j2cli python-pip python-pipenv \
             python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
             rsync ruby ruby-irb rustup sd shfmt stack starship tcpdump \
-            termshark terraform tmux tokei units unzip vifm vim wabt \
-            wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl zellij zip \
-            zoxide zsh zsh-completions
+            termshark terraform tokei units unzip vifm vim wabt wireshark-qt \
+            wget xdg-utils xh xonsh yadm youtube-dl zellij zip zoxide zsh \
+            zsh-completions
 
         rust-components
 
@@ -104,7 +104,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             fasd git haskell-platform httpie jq llvm lsb-release moreutils \
             mosh neofetch neovim nodejs npm p7zip-full pandoc plantuml \
             pylint3 python3-autopep8 python3 python3-pygments python3-rope \
-            ripgrep rmlint rsync ruby tmux unzip vifm vim xonsh zip zsh
+            ripgrep rmlint rsync ruby unzip vifm vim xonsh zip zsh
         rust
 
         ln -s /usr/bin/batcat "$HOME/.local/bin/bat"
