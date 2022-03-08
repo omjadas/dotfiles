@@ -13,7 +13,6 @@ update () {
     rustup update
     cargo install-update -a
     antigen update
-    nvm upgrade
     git-ignore -u
     vim -c "PlugUpdate | qa"
     nvim -c "PlugUpdate | qa"
