@@ -2,6 +2,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+mkdir -p "$XDG_DATA_HOME/zsh"
+
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
 export EDITOR='vim'
@@ -20,9 +23,6 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 fi
 
 export GOOGLER_COLORS=bjdxxy
-
-export NVM_DIR="$HOME/.nvm"
-export NVM_LAZY_LOAD=true
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666666"
 export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history)
