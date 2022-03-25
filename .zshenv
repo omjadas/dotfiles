@@ -33,10 +33,10 @@ export ZSH_COLORIZE_STYLE=solarized-dark
 [[ -f "$ZDOTDIR/.zsh_secrets" ]] && source "$ZDOTDIR/.zsh_secrets"
 
 # Add ~/.local/bin to path
-[[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin"
+[[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 
 # Add ~/.cargo/bin to path
-[[ -d "$HOME/.cargo/bin" ]] && export PATH="$PATH:$HOME/.cargo/bin"
+[[ -d "$HOME/.cargo/bin" ]] && export PATH="$HOME/.cargo/bin:$PATH"
 
 # Add krew binaries to path
 if [[ -d "${KREW_ROOT:-$HOME/.krew}/bin" ]]; then
@@ -45,8 +45,5 @@ fi
 
 # Add Android platform-tools to path
 if [[ -d "$HOME/Library/Android/sdk/platform-tools" ]]; then 
-    export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+    export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 fi
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-[[ -d "$HOME/.rvm/bin" ]] && export PATH="$PATH:$HOME/.rvm/bin"
