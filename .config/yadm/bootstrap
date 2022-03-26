@@ -35,6 +35,7 @@ gh-auth () {
 cd "$HOME"
 yadm submodule update --recursive --init
 mkdir -p "$HOME/.local/bin"
+mkdir -p "$HOME/.local/share/zsh"
 
 SYSTEM_TYPE=$(uname -s)
 
