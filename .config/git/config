@@ -22,4 +22,4 @@
     diffFilter = delta --color-only
 
 [init]
-	defaultBranch = main
+    defaultBranch = main

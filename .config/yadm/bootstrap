@@ -49,18 +49,18 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         sudo pacman -S --needed --noconfirm ansible aurpublish autopep8 \
             base-devel bat bat-extras bmon cabal-install cargo-audit \
             cargo-edit cargo-outdated cargo-tarpaulin cargo-watch clang \
-            diesel-cli direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl \
-            exa fd firefox fzf ghc ghc-static git git-absorb git-delta \
-            github-cli git-lfs go grex helix helm helmfile hexyl hyperfine \
-            iftop inetutils jdk-openjdk jq kompose kotlin kubectl kubectx \
-            llvm lsb-release lshw lsof man-db maven minikube miniserve mold \
-            moreutils namcap neofetch nmap nodejs npm openmpi openssh p7zip \
-            pacman-contrib pandoc plantuml procs python python-j2cli \
-            python-pip python-pipenv python-rope python-pylint pygmentize \
-            pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt \
-            stack starship tcpdump termshark terraform tokei units unzip vifm \
-            vim wabt wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl \
-            zellij zip zoxide zsh zsh-completions
+            diesel-cli difftastic direnv dlang-dmd dog dos2unix dotnet-sdk \
+            dust eksctl exa fd firefox fzf ghc ghc-static git git-absorb \
+            git-delta github-cli git-lfs go grex helix helm helmfile hexyl \
+            hyperfine iftop inetutils jdk-openjdk jq kompose kotlin kubectl \
+            kubectx llvm lsb-release lshw lsof man-db maven minikube \
+            miniserve mold moreutils namcap neofetch nmap nodejs npm openmpi \
+            openssh p7zip pacman-contrib pandoc plantuml procs python \
+            python-j2cli python-pip python-pipenv python-rope python-pylint \
+            pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
+            sd shfmt stack starship tcpdump termshark terraform tokei units \
+            unzip valgrind vifm vim wabt wireshark-qt wget xdg-utils xh xonsh \
+            yadm youtube-dl zellij zip zoxide zsh zsh-completions
 
         rust-components
 
