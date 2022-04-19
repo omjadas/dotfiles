@@ -59,8 +59,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             python-j2cli python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
             sd shfmt stack starship tcpdump termshark terraform tokei units \
-            unzip valgrind vifm vim wabt wireshark-qt wget xdg-utils xh xonsh \
-            yadm youtube-dl zellij zip zoxide zsh zsh-completions
+            unzip up valgrind vifm vim wabt wireshark-qt wget xdg-utils xh \
+            xonsh yadm youtube-dl zellij zip zoxide zsh zsh-completions
 
         rust-components
 
@@ -80,7 +80,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
             fnm-bin git-trim-bin go-jira-bin googler google-cloud-sdk \
             gotop-bin grpcurl-bin hadolint-bin k6-bin kube-score-bin \
-            kubeval-bin krew-bin mosh-git neovim-nightly-bin rustscan up-bin \
+            kubeval-bin krew-bin mosh-git neovim-nightly-bin rustscan \
             watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
