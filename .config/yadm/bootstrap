@@ -6,8 +6,8 @@ rust-components () {
     rustup default stable
     rustup toolchain install nightly
     rustup component add rls
-    cargo install cargo-cache cargo-expand cargo-geiger cargo-make \
-        cargo-udeps cargo-update cargo-workspaces when-cli
+    cargo install cargo-cache cargo-criterion cargo-expand cargo-geiger \
+        cargo-make cargo-udeps cargo-update cargo-workspaces when-cli
 }
 
 rust () {
@@ -48,14 +48,14 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         echo "Installing packages"
         sudo pacman -S --needed --noconfirm ansible aurpublish autopep8 \
             base-devel bat bat-extras bmon cabal-install cargo-audit \
-            cargo-edit cargo-outdated cargo-tarpaulin cargo-watch clang \
-            diesel-cli difftastic direnv dlang-dmd dog dos2unix dotnet-sdk \
-            dust eksctl exa fd firefox fzf ghc ghc-static git git-absorb \
-            git-delta github-cli git-lfs go grex helix helm helmfile hexyl \
-            hyperfine iftop inetutils jdk-openjdk jq kompose kotlin kubectl \
-            kubectx llvm lsb-release lshw lsof man-db maven minikube \
-            miniserve mold moreutils namcap neofetch nmap nodejs npm openmpi \
-            openssh p7zip pacman-contrib pandoc plantuml procs python \
+            cargo-edit cargo-flamegraph cargo-outdated cargo-tarpaulin \
+            cargo-watch clang diesel-cli difftastic direnv dlang-dmd dog \
+            dos2unix dotnet-sdk dust eksctl exa fd firefox fzf ghc ghc-static \
+            git git-absorb git-delta github-cli git-lfs go grex helix helm \
+            helmfile hexyl hyperfine iftop inetutils jdk-openjdk jq kompose \
+            kotlin kubectl kubectx llvm lsb-release lshw lsof man-db maven \
+            minikube miniserve mold moreutils namcap neofetch nmap nodejs npm \
+            openmpi openssh p7zip pacman-contrib pandoc plantuml procs python \
             python-j2cli python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
             sd shfmt stack starship tcpdump termshark terraform tokei units \
