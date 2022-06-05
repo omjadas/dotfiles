@@ -138,6 +138,9 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
         brew bundle --global
     fi
 
+    rust-components
+    cargo install cargo-edit cargo-outdated
+
     gh-auth
 fi
 
