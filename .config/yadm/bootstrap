@@ -54,13 +54,14 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             git git-absorb git-delta github-cli git-lfs go grex helix helm \
             helmfile hexyl hyperfine iftop inetutils jdk-openjdk jq kompose \
             kotlin kubectl kubectx llvm lsb-release lshw lsof man-db maven \
-            minikube miniserve mold moreutils namcap neofetch nmap nodejs npm \
-            openmpi openssh p7zip pacman-contrib pandoc plantuml procs python \
-            python-j2cli python-pip python-pipenv python-rope python-pylint \
-            pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
-            sd shfmt stack starship tcpdump termshark terraform tokei units \
-            unzip up valgrind vifm vim wabt wireshark-qt wget xdg-utils xh \
-            xonsh yadm youtube-dl zellij zip zoxide zsh zsh-completions
+            minikube miniserve mold moreutils mosh namcap neofetch nmap \
+            nodejs npm openmpi openssh p7zip pacman-contrib pandoc plantuml \
+            procs python python-j2cli python-pip python-pipenv python-rope \
+            python-pylint pygmentize pyenv rclone ripgrep rmlint rsync ruby \
+            ruby-irb rustup sd shfmt stack starship tcpdump termshark \
+            terraform tokei units unzip up valgrind vifm vim wabt \
+            wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl zellij zip \
+            zoxide zsh zsh-completions
 
         rust-components
 
@@ -80,8 +81,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
             fnm-bin git-trim-bin go-jira-bin googler google-cloud-sdk \
             gotop-bin grpcurl-bin hadolint-bin k6-bin kube-score-bin \
-            kubeval-bin krew-bin mosh-git neovim-nightly-bin rustscan \
-            watchman-bin yay
+            kubeval-bin krew-bin neovim-nightly-bin rustscan watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
             yay -S --needed --noconfirm android-studio google-chrome \
