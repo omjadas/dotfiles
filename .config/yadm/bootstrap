@@ -47,21 +47,21 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         echo "Installing packages"
         sudo pacman -S --needed --noconfirm ansible aurpublish autopep8 \
-            base-devel bat bat-extras bmon cabal-install cargo-audit \
-            cargo-edit cargo-flamegraph cargo-outdated cargo-tarpaulin \
-            cargo-watch clang diesel-cli difftastic direnv dlang-dmd dog \
-            dos2unix dotnet-sdk dust eksctl exa fd firefox fzf ghc ghc-static \
-            git git-absorb git-delta github-cli git-lfs go grex helix helm \
-            helmfile hexyl hyperfine iftop inetutils jdk-openjdk jq kompose \
-            kotlin kubectl kubectx llvm lsb-release lshw lsof man-db maven \
-            mediainfo minikube miniserve mold moreutils mosh namcap neofetch \
-            nmap nodejs npm openmpi openssh p7zip pacman-contrib pandoc \
-            plantuml procs python python-j2cli python-pip python-pipenv \
-            python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
-            rsync ruby ruby-irb rustup sd shfmt stack starship tcpdump \
-            termshark terraform tokei units unzip up valgrind vifm vim wabt \
-            wireshark-qt wget xdg-utils xh xonsh yadm youtube-dl zellij zip \
-            zoxide zsh zsh-completions
+            aws-cli-v2 base-devel bat bat-extras bmon cabal-install \
+            cargo-audit cargo-edit cargo-flamegraph cargo-outdated \
+            cargo-tarpaulin cargo-watch clang diesel-cli difftastic direnv \
+            dlang-dmd dog dos2unix dotnet-sdk dust eksctl exa fd firefox fzf \
+            ghc ghc-static git git-absorb git-delta github-cli git-lfs go \
+            grex helix helm helmfile hexyl hyperfine iftop inetutils \
+            jdk-openjdk jq kompose kotlin kubectl kubectx llvm lsb-release \
+            lshw lsof man-db maven mediainfo minikube miniserve mold \
+            moreutils mosh namcap neofetch nmap nodejs npm openmpi openssh \
+            p7zip pacman-contrib pandoc plantuml procs python python-j2cli \
+            python-pip python-pipenv python-rope python-pylint pygmentize \
+            pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt \
+            stack starship tcpdump termshark terraform tokei units unzip up \
+            valgrind vifm vim wabt wireshark-qt wget xdg-utils xh xonsh yadm \
+            youtube-dl zellij zip zoxide zsh zsh-completions
 
         rust-components
 
