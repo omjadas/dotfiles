@@ -50,7 +50,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             aws-cli-v2 base-devel bat bat-extras bmon cabal-install \
             cargo-audit cargo-edit cargo-flamegraph cargo-outdated \
             cargo-tarpaulin cargo-watch clang diesel-cli difftastic direnv \
-            dlang-dmd dog dos2unix dotnet-sdk dust eksctl exa fd firefox fzf \
+            dlang-dmd dog dos2unix dotnet-sdk dust eksctl eza fd firefox fzf \
             ghc ghc-static git git-absorb git-delta github-cli git-lfs go \
             grex helix helm helmfile hexyl hyperfine iftop inetutils \
             jdk-openjdk jq kompose kotlin kubectl kubectx llvm lsb-release \
