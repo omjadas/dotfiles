@@ -53,15 +53,15 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             dlang-dmd dog dos2unix dotnet-sdk dust eksctl eza fd firefox fzf \
             ghc ghc-static git git-absorb git-delta github-cli git-lfs go \
             grex helix helm helmfile hexyl hyperfine iftop inetutils \
-            jdk-openjdk jq kompose kotlin kubectl kubectx llvm lsb-release \
-            lshw lsof man-db maven mediainfo minikube miniserve mold \
-            moreutils mosh namcap neofetch nmap nodejs npm openmpi openssh \
-            p7zip pacman-contrib pandoc plantuml procs python python-j2cli \
-            python-pip python-pipenv python-rope python-pylint pygmentize \
-            pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup sd shfmt \
-            stack starship tcpdump termshark terraform tokei unzip up \
-            valgrind vifm vim wabt wireshark-qt wget xdg-utils xh xonsh yadm \
-            zellij zip zoxide zsh zsh-completions
+            jdk-openjdk just jq kompose kotlin kubectl kubectx llvm \
+            lsb-release lshw lsof man-db maven mediainfo minikube miniserve \
+            mold moreutils mosh namcap neofetch nmap nodejs npm openmpi \
+            openssh p7zip pacman-contrib pandoc plantuml procs python \
+            python-j2cli python-pip python-pipenv python-rope python-pylint \
+            pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
+            sd shfmt stack starship tcpdump termshark terraform tokei unzip \
+            up valgrind vifm vim wabt wireshark-qt wget xdg-utils xh xonsh \
+            yadm zellij zip zoxide zsh zsh-completions
 
         rust-components
 
