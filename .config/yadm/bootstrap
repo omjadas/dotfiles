@@ -78,10 +78,10 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         fi
 
         yay -S --needed --noconfirm amazon-ec2-instance-selector-bin atool \
-            aws-cli-v2-bin aws-iam-authenticator-bin azure-cli browsh-bin \
-            fnm-bin git-trim-bin go-jira-bin googler google-cloud-sdk \
-            gotop-bin grpcurl-bin hadolint-bin k6-bin kube-score-bin \
-            kubeval-bin krew-bin neovim-nightly-bin rustscan watchman-bin yay
+            aws-iam-authenticator-bin azure-cli browsh-bin fnm-bin \
+            git-trim-bin go-jira-bin googler google-cloud-sdk gotop-bin \
+            grpcurl-bin hadolint-bin k6-bin kube-score-bin kubeval-bin \
+            krew-bin neovim-nightly-bin rustscan watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
             yay -S --needed --noconfirm android-studio google-chrome \
