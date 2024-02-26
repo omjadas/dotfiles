@@ -85,7 +85,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
 
         if [[ -z "$HEADLESS" ]]; then
             yay -S --needed --noconfirm android-studio google-chrome \
-                google-chrome-beta google-chrome-dev postman-bin \
+                google-chrome-beta google-chrome-dev obs-studio postman-bin \
                 visual-studio-code-bin
         fi
 
