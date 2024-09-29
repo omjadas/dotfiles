@@ -55,8 +55,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             grex helix helm helmfile hexyl hyperfine iftop inetutils \
             jdk-openjdk just jq kompose kotlin kubectl kubectx llvm \
             lsb-release lshw lsof man-db maven mediainfo minikube miniserve \
-            mold moreutils mosh namcap neofetch nmap nodejs npm openmpi \
-            openssh p7zip pacman-contrib pandoc plantuml procs python \
+            mold moreutils mosh namcap neofetch neovim nmap nodejs npm \
+            openmpi openssh p7zip pacman-contrib pandoc plantuml procs python \
             python-j2cli python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
             sd shfmt stack starship tcpdump termshark terraform tokei unzip \
@@ -81,7 +81,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             aws-iam-authenticator-bin azure-cli browsh-bin fnm-bin \
             git-trim-bin go-jira-bin googler google-cloud-sdk gotop-bin \
             grpcurl-bin hadolint-bin k6-bin kube-score-bin kubeval-bin \
-            krew-bin neovim-nightly-bin rustscan watchman-bin yay
+            krew-bin rustscan watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
             yay -S --needed --noconfirm android-studio google-chrome \
