@@ -6,7 +6,7 @@ rust-components () {
     rustup default stable
     rustup toolchain install nightly
     rustup component add rls
-    cargo install cargo-cache cargo-criterion cargo-workspaces when-cli
+    cargo install cargo-criterion cargo-workspaces when-cli
 }
 
 rust () {
@@ -47,13 +47,13 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         echo "Installing packages"
         sudo pacman -S --needed --noconfirm ansible aurpublish autopep8 \
             aws-cli-v2 base-devel bat bat-extras bmon cabal-install \
-            cargo-audit cargo-edit cargo-expand cargo-flamegraph cargo-geiger \
-            cargo-make cargo-outdated cargo-tarpaulin cargo-udeps \
-            cargo-update cargo-watch clang diesel-cli difftastic direnv \
-            dlang-dmd dog dos2unix dotnet-sdk dust eksctl eza fd firefox fzf \
-            ghc ghc-static git git-absorb git-delta github-cli git-lfs go \
-            grex helix helm helmfile hexyl hyperfine iftop inetutils \
-            jdk-openjdk just jq kompose kotlin kubectl kubectx llvm \
+            cargo-audit cargo-cache cargo-edit cargo-expand cargo-flamegraph \
+            cargo-geiger cargo-make cargo-outdated cargo-tarpaulin \
+            cargo-udeps cargo-update cargo-watch clang diesel-cli difftastic \
+            direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl eza fd \
+            firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
+            git-lfs go grex helix helm helmfile hexyl hyperfine iftop \
+            inetutils jdk-openjdk just jq kompose kotlin kubectl kubectx llvm \
             lsb-release lshw lsof man-db maven mediainfo minikube miniserve \
             mold moreutils mosh namcap neofetch neovim nmap nodejs npm \
             openmpi openssh p7zip pacman-contrib pandoc plantuml procs python \
@@ -139,9 +139,9 @@ elif [[ "$SYSTEM_TYPE" = "Darwin" ]]; then
     fi
 
     rust-components
-    cargo install cargo-audit cargo-edit cargo-expand cargo-flamegraph \
-        cargo-geiger cargo-make cargo-outdated cargo-tarpaulin cargo-udeps \
-        cargo-update cargo-watch
+    cargo install cargo-audit cargo-cache cargo-edit cargo-expand \
+        cargo-flamegraph cargo-geiger cargo-make cargo-outdated \
+        cargo-tarpaulin cargo-udeps cargo-update cargo-watch
 
     gh-auth
 fi
