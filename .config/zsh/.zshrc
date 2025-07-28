@@ -33,8 +33,6 @@ antigen bundle vscode
 
 antigen bundle akarzim/zsh-docker-aliases
 
-antigen bundle laggardkernel/git-ignore
-
 antigen bundle MichaelAquilina/zsh-you-should-use
 
 antigen bundle omjadas/yadm-zsh
