@@ -59,9 +59,9 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             openmpi openssh p7zip pacman-contrib pandoc plantuml procs python \
             python-j2cli python-pip python-pipenv python-rope python-pylint \
             pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
-            sd shfmt stack starship tcpdump termshark terraform tokei unzip \
-            up valgrind vifm vim wabt wireshark-qt wget xdg-utils xh xonsh \
-            yadm zellij zip zoxide zsh zsh-completions
+            sd shfmt stack starship tcpdump termshark terraform tokei trippy \
+            unzip up valgrind vifm vim wabt wireshark-qt wget xdg-utils xh \
+            xonsh yadm zellij zip zoxide zsh zsh-completions
 
         rust-components
 
