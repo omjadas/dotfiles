@@ -53,15 +53,16 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl eza fd \
             firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
             git-lfs go grex helix helm helmfile hexyl hyperfine iftop \
-            inetutils jdk-openjdk just jq kompose kotlin kubectl kubectx llvm \
-            lsb-release lshw lsof man-db maven mediainfo minikube miniserve \
-            mold moreutils mosh namcap neofetch neovim nmap nodejs npm \
-            openmpi openssh p7zip pacman-contrib pandoc plantuml procs python \
-            python-j2cli python-pip python-pipenv python-rope python-pylint \
-            pygmentize pyenv rclone ripgrep rmlint rsync ruby ruby-irb rustup \
-            sd shfmt stack starship tcpdump termshark terraform tokei trippy \
-            unzip up valgrind vifm vim wabt wireshark-qt wget xdg-utils xh \
-            xonsh yadm zellij zip zoxide zsh zsh-completions
+            inetutils jdk-openjdk just jq kompose kotlin kubeconform kubectl \
+            kubectx llvm lsb-release lshw lsof man-db maven mediainfo \
+            minikube miniserve mold moreutils mosh namcap neofetch neovim \
+            nmap nodejs npm openmpi openssh p7zip pacman-contrib pandoc \
+            plantuml procs python python-j2cli python-pip python-pipenv \
+            python-rope python-pylint pygmentize pyenv rclone ripgrep rmlint \
+            rsync ruby ruby-irb rustup sd shfmt stack starship tcpdump \
+            termshark terraform tokei trippy unzip up valgrind vifm vim wabt \
+            wireshark-qt wget xdg-utils xh xonsh yadm zellij zip zoxide zsh \
+            zsh-completions
 
         rust-components
 
@@ -80,8 +81,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         yay -S --needed --noconfirm amazon-ec2-instance-selector-bin atool \
             aws-iam-authenticator-bin azure-cli browsh-bin fnm-bin \
             git-trim-bin go-jira-bin googler google-cloud-sdk gotop-bin \
-            grpcurl-bin hadolint-bin k6-bin kube-score-bin kubeval-bin \
-            krew-bin rustscan watchman-bin yay
+            grpcurl-bin hadolint-bin k6-bin kube-score-bin krew-bin rustscan \
+            watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
             yay -S --needed --noconfirm android-studio google-chrome \
