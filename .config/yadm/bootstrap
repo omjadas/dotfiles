@@ -53,8 +53,8 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
             direnv dlang-dmd dog dos2unix dotnet-sdk dust eksctl eza fd \
             firefox fzf ghc ghc-static git git-absorb git-delta github-cli \
             git-lfs go grex helix helm helmfile hexyl hyperfine iftop \
-            inetutils jdk-openjdk just jq kompose kotlin kubeconform kubectl \
-            kubectx llvm lsb-release lshw lsof man-db maven mediainfo \
+            inetutils jdk-openjdk just jq kompose kotlin krew kubeconform \
+            kubectl kubectx llvm lsb-release lshw lsof man-db maven mediainfo \
             minikube miniserve mold moreutils mosh namcap neofetch neovim \
             nmap nodejs npm openmpi openssh p7zip pacman-contrib pandoc \
             plantuml procs python python-j2cli python-pip python-pipenv \
@@ -81,7 +81,7 @@ if [[ "$SYSTEM_TYPE" = "Linux" ]]; then
         yay -S --needed --noconfirm amazon-ec2-instance-selector-bin atool \
             aws-iam-authenticator-bin azure-cli browsh-bin fnm-bin \
             git-trim-bin go-jira-bin googler google-cloud-sdk gotop-bin \
-            grpcurl-bin hadolint-bin k6-bin kube-score-bin krew-bin rustscan \
+            grpcurl-bin hadolint-bin k6-bin kube-score-bin rustscan \
             watchman-bin yay
 
         if [[ -z "$HEADLESS" ]]; then
